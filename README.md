@@ -1,9 +1,10 @@
-# Grand Line Dle V1.04
+# Grand Line Dle V1.05
 
-Atualização da busca de personagens.
-
-- As sugestões agora mostram uma miniatura do personagem ao lado do nome.
-- As miniaturas usam as mesmas imagens já cadastradas no `characters.js`.
-- Mantido Enter para selecionar a primeira sugestão.
-- Adicionada navegação por ↑ e ↓ entre as sugestões antes de pressionar Enter.
-- Nenhum dado de personagens ou regra de comparação foi alterado.
+- Personagem diário em ordem pseudoaleatória fixa, igual para todos e sem seguir a ordem do cadastro.
+- Nova origem `Sky Island` para personagens originários das ilhas do céu.
+- Gorosei cadastrados como `Zoan`.
+- Busca por aliases: Kizaru, Akainu, Aokiji, Ryokugyu/Green Bull e Big Mom.
+- Contagem de dias jogados salva no navegador após a primeira tentativa válida do dia.
+- Altura desconhecida aparece como `—` e não gera seta falsa.
+- Novo favicon do Log Pose.
+- SEO: título, descrição e Open Graph com imagem de compartilhamento.

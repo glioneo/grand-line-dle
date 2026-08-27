@@ -259,7 +259,10 @@ const CHARACTERS=[
     ],
     "bounty": 4388000000,
     "height": 8.8,
-    "arc": "Fish-Man Island"
+    "arc": "Fish-Man Island",
+    "aliases": [
+      "Big Mom"
+    ]
   },
   {
     "name": "Sakazuki",
@@ -275,7 +278,10 @@ const CHARACTERS=[
     ],
     "bounty": 5000000000,
     "height": 3.06,
-    "arc": "Enies Lobby"
+    "arc": "Enies Lobby",
+    "aliases": [
+      "Akainu"
+    ]
   },
   {
     "name": "Borsalino",
@@ -291,7 +297,10 @@ const CHARACTERS=[
     ],
     "bounty": 3000000000,
     "height": 3.02,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Kizaru"
+    ]
   },
   {
     "name": "Kuzan",
@@ -307,7 +316,10 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 2.98,
-    "arc": "Long Ring Long Land"
+    "arc": "Long Ring Long Land",
+    "aliases": [
+      "Aokiji"
+    ]
   },
   {
     "name": "Boa Hancock",
@@ -1245,7 +1257,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 3.08,
-    "arc": "Reverie"
+    "arc": "Reverie",
+    "aliases": [
+      "Ryokugyu",
+      "Green Bull"
+    ]
   },
   {
     "name": "Monkey D. Garp",
@@ -2306,7 +2322,7 @@ const CHARACTERS=[
     "image": "enel.jpg",
     "gender": "Masculino",
     "affiliation": "Sem afiliação",
-    "origin": "Grand Line",
+    "origin": "Sky Island",
     "fruit": "Logia",
     "haki": "Observação",
     "haki_types": [
@@ -2321,7 +2337,7 @@ const CHARACTERS=[
     "image": "ohm.png",
     "gender": "Masculino",
     "affiliation": "Sacerdotes de Enel",
-    "origin": "Grand Line",
+    "origin": "Sky Island",
     "fruit": "Sem fruta",
     "haki": "Observação",
     "haki_types": [
@@ -2336,7 +2352,7 @@ const CHARACTERS=[
     "image": "satori.png",
     "gender": "Masculino",
     "affiliation": "Sacerdotes de Enel",
-    "origin": "Grand Line",
+    "origin": "Sky Island",
     "fruit": "Sem fruta",
     "haki": "Observação",
     "haki_types": [
@@ -2351,7 +2367,7 @@ const CHARACTERS=[
     "image": "shura.jpg",
     "gender": "Masculino",
     "affiliation": "Sacerdotes de Enel",
-    "origin": "Grand Line",
+    "origin": "Sky Island",
     "fruit": "Sem fruta",
     "haki": "Observação",
     "haki_types": [
@@ -2366,7 +2382,7 @@ const CHARACTERS=[
     "image": "gedatsu.jpg",
     "gender": "Masculino",
     "affiliation": "Sacerdotes de Enel",
-    "origin": "Grand Line",
+    "origin": "Sky Island",
     "fruit": "Sem fruta",
     "haki": "Observação",
     "haki_types": [
@@ -2381,7 +2397,7 @@ const CHARACTERS=[
     "image": "wyper.jpg",
     "gender": "Masculino",
     "affiliation": "Shandia",
-    "origin": "Grand Line",
+    "origin": "Sky Island",
     "fruit": "Sem fruta",
     "haki": "Nenhum",
     "haki_types": [],
@@ -2616,7 +2632,7 @@ const CHARACTERS=[
     "image": "urouge.jpg",
     "gender": "Masculino",
     "affiliation": "Piratas do Monge Caído",
-    "origin": "Grand Line",
+    "origin": "Sky Island",
     "fruit": "Paramecia",
     "haki": "2 tipos",
     "haki_types": [
@@ -3040,7 +3056,7 @@ const CHARACTERS=[
     "gender": "Masculino",
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
-    "fruit": "Sem fruta",
+    "fruit": "Zoan",
     "haki": "3 tipos",
     "haki_types": [
       "Observação",
@@ -3057,7 +3073,7 @@ const CHARACTERS=[
     "gender": "Masculino",
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
-    "fruit": "Sem fruta",
+    "fruit": "Zoan",
     "haki": "3 tipos",
     "haki_types": [
       "Observação",
@@ -3074,7 +3090,7 @@ const CHARACTERS=[
     "gender": "Masculino",
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
-    "fruit": "Sem fruta",
+    "fruit": "Zoan",
     "haki": "3 tipos",
     "haki_types": [
       "Observação",
@@ -3091,7 +3107,7 @@ const CHARACTERS=[
     "gender": "Masculino",
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
-    "fruit": "Sem fruta",
+    "fruit": "Zoan",
     "haki": "3 tipos",
     "haki_types": [
       "Observação",
@@ -3108,7 +3124,7 @@ const CHARACTERS=[
     "gender": "Masculino",
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
-    "fruit": "Sem fruta",
+    "fruit": "Zoan",
     "haki": "3 tipos",
     "haki_types": [
       "Observação",
