@@ -408,11 +408,8 @@ const CHARACTERS=[
     "affiliation": "Piratas Guerreiros Gigantes",
     "origin": "Grand Line",
     "fruit": "Sem fruta",
-    "haki": "2 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 1800000000,
     "height": 22.6,
     "arc": "Little Garden"
@@ -424,11 +421,8 @@ const CHARACTERS=[
     "affiliation": "Piratas Guerreiros Gigantes",
     "origin": "Grand Line",
     "fruit": "Sem fruta",
-    "haki": "2 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 1800000000,
     "height": 21.3,
     "arc": "Little Garden"
@@ -2132,12 +2126,8 @@ const CHARACTERS=[
     "affiliation": "Exército Revolucionário",
     "origin": "East Blue",
     "fruit": "Sem fruta",
-    "haki": "3 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento",
-      "Rei"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 0,
     "height": 2.56,
     "arc": "Loguetown"
@@ -2324,7 +2314,7 @@ const CHARACTERS=[
     "affiliation": "Sem afiliação",
     "origin": "Sky Island",
     "fruit": "Logia",
-    "haki": "Observação",
+    "haki": "1 tipo",
     "haki_types": [
       "Observação"
     ],
@@ -2339,7 +2329,7 @@ const CHARACTERS=[
     "affiliation": "Sacerdotes de Enel",
     "origin": "Sky Island",
     "fruit": "Sem fruta",
-    "haki": "Observação",
+    "haki": "1 tipo",
     "haki_types": [
       "Observação"
     ],
@@ -2354,7 +2344,7 @@ const CHARACTERS=[
     "affiliation": "Sacerdotes de Enel",
     "origin": "Sky Island",
     "fruit": "Sem fruta",
-    "haki": "Observação",
+    "haki": "1 tipo",
     "haki_types": [
       "Observação"
     ],
@@ -2369,7 +2359,7 @@ const CHARACTERS=[
     "affiliation": "Sacerdotes de Enel",
     "origin": "Sky Island",
     "fruit": "Sem fruta",
-    "haki": "Observação",
+    "haki": "1 tipo",
     "haki_types": [
       "Observação"
     ],
@@ -2384,7 +2374,7 @@ const CHARACTERS=[
     "affiliation": "Sacerdotes de Enel",
     "origin": "Sky Island",
     "fruit": "Sem fruta",
-    "haki": "Observação",
+    "haki": "1 tipo",
     "haki_types": [
       "Observação"
     ],
@@ -2537,11 +2527,9 @@ const CHARACTERS=[
     "affiliation": "Clã Kozuki",
     "origin": "Grand Line",
     "fruit": "Zoan",
-    "haki": "3 tipos",
+    "haki": "1 tipo",
     "haki_types": [
-      "Observação",
-      "Armamento",
-      "Rei"
+      "Observação"
     ],
     "bounty": 0,
     "height": 2.95,
@@ -2693,9 +2681,8 @@ const CHARACTERS=[
     "affiliation": "Piratas do Barba Branca",
     "origin": "South Blue",
     "fruit": "Logia",
-    "haki": "3 tipos",
+    "haki": "2 tipos",
     "haki_types": [
-      "Observação",
       "Armamento",
       "Rei"
     ],
@@ -3003,7 +2990,7 @@ const CHARACTERS=[
     "affiliation": "Reino de Dressrosa",
     "origin": "Grand Line",
     "fruit": "Sem fruta",
-    "haki": "Observação",
+    "haki": "1 tipo",
     "haki_types": [
       "Observação"
     ],
@@ -3057,10 +3044,9 @@ const CHARACTERS=[
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
     "fruit": "Zoan",
-    "haki": "3 tipos",
+    "haki": "2 tipos",
     "haki_types": [
       "Observação",
-      "Armamento",
       "Rei"
     ],
     "bounty": 0,
@@ -3074,10 +3060,9 @@ const CHARACTERS=[
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
     "fruit": "Zoan",
-    "haki": "3 tipos",
+    "haki": "2 tipos",
     "haki_types": [
       "Observação",
-      "Armamento",
       "Rei"
     ],
     "bounty": 0,
@@ -3108,11 +3093,9 @@ const CHARACTERS=[
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
     "fruit": "Zoan",
-    "haki": "3 tipos",
+    "haki": "1 tipo",
     "haki_types": [
-      "Observação",
-      "Armamento",
-      "Rei"
+      "Observação"
     ],
     "bounty": 0,
     "height": 0,
@@ -3125,10 +3108,9 @@ const CHARACTERS=[
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
     "fruit": "Zoan",
-    "haki": "3 tipos",
+    "haki": "2 tipos",
     "haki_types": [
       "Observação",
-      "Armamento",
       "Rei"
     ],
     "bounty": 0,
@@ -3142,12 +3124,8 @@ const CHARACTERS=[
     "affiliation": "Governo Mundial",
     "origin": "Grand Line",
     "fruit": "Sem fruta",
-    "haki": "3 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento",
-      "Rei"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 0,
     "height": 0,
     "arc": "Egghead"
@@ -3185,8 +3163,9 @@ const CHARACTERS=[
     "affiliation": "Yakuza de Wano",
     "origin": "Grand Line",
     "fruit": "Sem fruta",
-    "haki": "Armamento",
+    "haki": "2 tipos",
     "haki_types": [
+      "Observação",
       "Armamento"
     ],
     "bounty": 0,
@@ -3445,11 +3424,8 @@ const CHARACTERS=[
     "affiliation": "Germa 66",
     "origin": "North Blue",
     "fruit": "Sem fruta",
-    "haki": "2 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 0,
     "height": 2.72,
     "arc": "Whole Cake Island"
@@ -3461,11 +3437,8 @@ const CHARACTERS=[
     "affiliation": "Germa 66",
     "origin": "North Blue",
     "fruit": "Sem fruta",
-    "haki": "2 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 0,
     "height": 1.73,
     "arc": "Whole Cake Island"
@@ -3477,11 +3450,8 @@ const CHARACTERS=[
     "affiliation": "Germa 66",
     "origin": "North Blue",
     "fruit": "Sem fruta",
-    "haki": "2 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 0,
     "height": 1.86,
     "arc": "Whole Cake Island"
@@ -3493,11 +3463,8 @@ const CHARACTERS=[
     "affiliation": "Germa 66",
     "origin": "North Blue",
     "fruit": "Sem fruta",
-    "haki": "2 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 0,
     "height": 1.85,
     "arc": "Whole Cake Island"
@@ -3509,11 +3476,8 @@ const CHARACTERS=[
     "affiliation": "Germa 66",
     "origin": "North Blue",
     "fruit": "Sem fruta",
-    "haki": "2 tipos",
-    "haki_types": [
-      "Observação",
-      "Armamento"
-    ],
+    "haki": "Nenhum",
+    "haki_types": [],
     "bounty": 0,
     "height": 1.94,
     "arc": "Whole Cake Island"

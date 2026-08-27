@@ -8,3 +8,7 @@
 - Altura desconhecida aparece como `—` e não gera seta falsa.
 - Novo favicon do Log Pose.
 - SEO: título, descrição e Open Graph com imagem de compartilhamento.
+
+
+## Revisão de Haki
+Foi feita uma auditoria dos campos `haki` e `haki_types`. O texto exibido agora é sempre derivado da quantidade de tipos confirmados. Foram corrigidos casos específicos confirmados e removidas presunções claras de Haki não confirmado.
