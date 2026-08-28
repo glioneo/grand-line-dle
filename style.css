@@ -14,16 +14,18 @@ body {
 }
 
 
-/* Contador compacto em bandeira - V1.05 */
+
+
+/* Contador horizontal em bandeira - V1.05 */
 .daysFlag {
   position: relative;
-  width: 92px;
-  height: 48px;
-  margin: 2px auto 8px;
+  width: 120px;
+  height: 54px;
+  margin: 1px auto 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 3px 5px rgba(0,0,0,.42));
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.40));
 }
 .daysFlag img {
   position: absolute;
@@ -36,11 +38,11 @@ body {
 .daysFlag strong {
   position: relative;
   z-index: 1;
-  margin-left: 8px;
-  margin-top: -1px;
+  /* medalhão fica levemente à esquerda do centro da arte */
+  transform: translateX(-8px);
   min-width: 28px;
   text-align: center;
-  color: #fff8df;
+  color: #fff9e8;
   font-size: 20px;
   line-height: 1;
   font-weight: 900;
@@ -53,11 +55,12 @@ body {
 }
 @media (max-width: 700px) {
   .daysFlag {
-    width: 82px;
-    height: 44px;
-    margin-bottom: 7px;
+    width: 108px;
+    height: 50px;
+    margin-bottom: 6px;
   }
   .daysFlag strong {
     font-size: 18px;
+    transform: translateX(-7px);
   }
 }
