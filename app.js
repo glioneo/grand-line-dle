@@ -79,14 +79,18 @@ function submit(){
     win.classList.remove("hidden")
   }else q.focus()
 }
+function startsWithAnyPart(value,z){
+  return norm(value).split(/\s+/).some(part=>part.startsWith(z))
+}
 function suggest(){
   let z=norm(q.value.trim());
   if(!z){sugs.style.display="none";return}
-  let m=CHARACTERS.filter(x=>(norm(x.name).startsWith(z)||(x.aliases||[]).some(a=>norm(a).startsWith(z)))&&!guessed.has(x.name)).slice(0,20);
+  let m=CHARACTERS.filter(x=>(startsWithAnyPart(x.name,z)||(x.aliases||[]).some(a=>startsWithAnyPart(a,z)))&&!guessed.has(x.name)).slice(0,20);
   sugIndex=-1;
   sugs.innerHTML=m.map(x=>{
-    const alias=(x.aliases||[]).find(a=>norm(a).startsWith(z));
-    const aliasText=alias&&!norm(x.name).startsWith(z)?` <small>(${alias})</small>`:"";
+    const nameMatch=startsWithAnyPart(x.name,z);
+    const alias=(x.aliases||[]).find(a=>startsWithAnyPart(a,z));
+    const aliasText=alias&&!nameMatch?` <small>(${alias})</small>`:"";
     return`<div class="sug" data-n="${x.name}">${x.image?`<img class="sug-photo" src="images/characters/${x.image}" alt="">`:`<div class="sug-photo sug-placeholder">${x.name.split(" ").map(p=>p[0]).slice(0,2).join("")}</div>`}<span class="sug-name">${x.name}${aliasText}</span></div>`
   }).join("");
   sugs.style.display=m.length?"block":"none";

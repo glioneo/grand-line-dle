@@ -3540,6 +3540,153 @@ const CHARACTERS=[
     "height": 0,
     "arc": "Desconhecido",
     "daily": false
+  },
+  {
+    "name": "Smoker",
+    "image": "smoker.png",
+    "gender": "Masculino",
+    "affiliation": "Marinha",
+    "origin": "Grand Line",
+    "fruit": "Logia",
+    "haki": "2 tipos",
+    "haki_types": [
+      "Observação",
+      "Armamento"
+    ],
+    "bounty": 500000000,
+    "height": 2.09,
+    "arc": "Loguetown"
+  },
+  {
+    "name": "Koby",
+    "image": "koby.png",
+    "gender": "Masculino",
+    "affiliation": "Marinha",
+    "origin": "East Blue",
+    "fruit": "Sem fruta",
+    "haki": "2 tipos",
+    "haki_types": [
+      "Observação",
+      "Armamento"
+    ],
+    "bounty": 500000000,
+    "height": 1.67,
+    "arc": "Romance Dawn"
+  },
+  {
+    "name": "Kin'emon",
+    "image": "kinemon.png",
+    "gender": "Masculino",
+    "affiliation": "Clã Kozuki",
+    "origin": "Grand Line",
+    "fruit": "Paramecia",
+    "haki": "2 tipos",
+    "haki_types": [
+      "Observação",
+      "Armamento"
+    ],
+    "bounty": 0,
+    "height": 2.95,
+    "arc": "Punk Hazard"
+  },
+  {
+    "name": "Crocus",
+    "image": "crocus.png",
+    "gender": "Masculino",
+    "affiliation": "Piratas do Roger",
+    "origin": "Grand Line",
+    "fruit": "Sem fruta",
+    "haki": "1 tipo",
+    "haki_types": [
+      "Observação"
+    ],
+    "bounty": 0,
+    "height": 2.03,
+    "arc": "Reverse Mountain"
+  },
+  {
+    "name": "Karoo",
+    "image": "karoo.png",
+    "gender": "Masculino",
+    "affiliation": "Reino de Alabasta",
+    "origin": "Grand Line",
+    "fruit": "Sem fruta",
+    "haki": "Nenhum",
+    "haki_types": [],
+    "bounty": 0,
+    "height": 1.5,
+    "arc": "Whisky Peak"
+  },
+  {
+    "name": "Benn Beckman",
+    "image": "bennbeckman.png",
+    "gender": "Masculino",
+    "affiliation": "Piratas do Ruivo",
+    "origin": "North Blue",
+    "fruit": "Sem fruta",
+    "haki": "1 tipo",
+    "haki_types": [
+      "Armamento"
+    ],
+    "bounty": 0,
+    "height": 2.06,
+    "arc": "Romance Dawn"
+  },
+  {
+    "name": "Yasopp",
+    "image": "yasopp.png",
+    "gender": "Masculino",
+    "affiliation": "Piratas do Ruivo",
+    "origin": "East Blue",
+    "fruit": "Sem fruta",
+    "haki": "1 tipo",
+    "haki_types": [
+      "Observação"
+    ],
+    "bounty": 0,
+    "height": 1.83,
+    "arc": "Romance Dawn"
+  },
+  {
+    "name": "Lucky Roux",
+    "image": "luckyroux.png",
+    "gender": "Masculino",
+    "affiliation": "Piratas do Ruivo",
+    "origin": "South Blue",
+    "fruit": "Sem fruta",
+    "haki": "1 tipo",
+    "haki_types": [
+      "Armamento"
+    ],
+    "bounty": 0,
+    "height": 2.41,
+    "arc": "Romance Dawn"
+  },
+  {
+    "name": "Kuina",
+    "image": "kuina.png",
+    "gender": "Feminino",
+    "affiliation": "Dojo Isshin",
+    "origin": "East Blue",
+    "fruit": "Sem fruta",
+    "haki": "Nenhum",
+    "haki_types": [],
+    "bounty": 0,
+    "height": 1.5,
+    "arc": "Romance Dawn"
+  },
+  {
+    "name": "Kaya",
+    "image": "kaya.png",
+    "gender": "Feminino",
+    "affiliation": "Vila Syrup",
+    "origin": "East Blue",
+    "fruit": "Sem fruta",
+    "haki": "Nenhum",
+    "haki_types": [],
+    "bounty": 0,
+    "height": 1.69,
+    "arc": "Syrup Village"
   }
 ];
-const ARC_ORDER=["Romance Dawn", "Orange Town", "Syrup Village", "Baratie", "Arlong Park", "Loguetown", "Whisky Peak", "Little Garden", "Drum Island", "Alabasta", "Jaya", "Skypiea", "Long Ring Long Land", "Water 7", "Enies Lobby", "Thriller Bark", "Sabaody", "Amazon Lily", "Impel Down", "Marineford", "Fish-Man Island", "Punk Hazard", "Dressrosa", "Zou", "Whole Cake Island", "Reverie", "Wano", "Egghead"];
+const ARC_ORDER=["Romance Dawn", "Orange Town", "Syrup Village", "Baratie", "Arlong Park", "Loguetown", "Reverse Mountain", "Whisky Peak", "Little Garden", "Drum Island", "Alabasta", "Jaya", "Skypiea", "Long Ring Long Land", "Water 7", "Enies Lobby", "Thriller Bark", "Sabaody", "Amazon Lily", "Impel Down", "Marineford", "Fish-Man Island", "Punk Hazard", "Dressrosa", "Zou", "Whole Cake Island", "Reverie", "Wano", "Egghead"];
