@@ -27,6 +27,7 @@ body {
   justify-content: center;
   filter: drop-shadow(0 3px 5px rgba(0,0,0,.40));
 }
+.daysFlag img,
 .daysFlag .flagArt {
   position: absolute;
   inset: 0;
@@ -71,5 +72,5 @@ body {
 
 
 /* Streak e estatísticas - V1.07 */
-.daysFlag .flagArt{transition:opacity .2s ease}.daysFlag[data-tier="jolly"]{filter:drop-shadow(0 3px 5px rgba(0,0,0,.4)) drop-shadow(0 0 7px rgba(216,170,81,.65))}
+.daysFlag img,.daysFlag .flagArt{transition:opacity .2s ease}.daysFlag[data-tier="jolly"]{filter:drop-shadow(0 3px 5px rgba(0,0,0,.4)) drop-shadow(0 0 7px rgba(216,170,81,.65))}
 .statsBox{max-width:680px;margin:22px auto 0;padding:18px 22px;border:1px solid var(--line);border-radius:10px;background:rgba(7,22,34,.94)}.statsBox h2,.statsBox h3{text-align:center;margin:0 0 15px}.statsBox h2{color:var(--gold);font-size:19px}.statsBox h3{margin-top:19px;color:#c7d4df;font-size:14px;text-transform:uppercase;letter-spacing:.8px}.statsSummary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}.statsSummary div{padding:10px 6px;background:#0b1d2d;border-radius:8px}.statsSummary strong{display:block;font-size:24px;color:#fff}.statsSummary span{display:block;margin-top:3px;color:#9fb3c8;font-size:12px}.distribution{display:grid;gap:7px}.distRow{display:grid;grid-template-columns:28px 1fr 34px;gap:8px;align-items:center;font-size:13px}.distRow b{text-align:right;color:#c7d4df}.distRow>span{font-weight:800;text-align:left}.distTrack{height:18px;background:#091722;border-radius:4px;overflow:hidden}.distTrack i{display:block;width:0;height:100%;background:var(--gold);border-radius:4px;transition:width .3s ease}.distTrack i[style*="width: 0%"]{min-width:0}@media(max-width:700px){.statsBox{padding:15px 12px}.statsSummary{gap:6px}.statsSummary strong{font-size:21px}.statsSummary span{font-size:11px}}

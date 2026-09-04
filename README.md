@@ -21,3 +21,8 @@
 - Ajuste visual final V1.07: número diretamente no tecido da bandeira, sem medalhão ou máscara.
 
 - Ajuste visual V1.07: bandeiras de sequência ficaram mais compactas, reduzindo o excesso de tecido vazio sem alterar a altura.
+
+### Correção V1.07.1
+- Corrigido o dimensionamento da bandeira quando arquivos da V1.06 e V1.07 ficam temporariamente misturados em cache ou durante a atualização do GitHub Pages.
+- A imagem da bandeira agora é limitada pelo contêiner mesmo sem a classe `flagArt`.
+- Adicionado cache-busting aos arquivos CSS e JavaScript para reduzir a chance de o navegador carregar uma versão antiga junto da nova.

@@ -77,11 +77,11 @@ function flagTier(streak){
 }
 function updateStats(){
   const s=loadStats(),streak=effectiveStreak(s);
-  const flag=document.querySelector("#streakFlag"),num=document.querySelector("#streakCount");
+  const flag=document.querySelector("#streakFlag")||document.querySelector(".daysFlag"),num=document.querySelector("#streakCount")||document.querySelector("#playedDays");
   if(flag){
-    const tier=flagTier(streak),img=flag.querySelector(".flagArt"),assetTier=tier==="jolly"?"black":tier;
+    const tier=flagTier(streak),img=flag.querySelector(".flagArt")||flag.querySelector("img"),assetTier=tier==="jolly"?"black":tier;
     flag.dataset.tier=tier;
-    if(img)img.src=`images/flags/days-flag-${assetTier}.png`;
+    if(img){img.classList.add("flagArt");img.src=`images/flags/days-flag-${assetTier}.png`;}
   }
   if(num){num.textContent=streak;num.dataset.digits=String(streak).length;}
   const vals={statWins:s.wins,statStreak:streak,statBest:s.bestStreak};
