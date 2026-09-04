@@ -1,4 +1,5 @@
 # Grand Line Dle V1.07
+- Correção visual: removidos artefatos retangulares e resíduos nos cantos das bandeiras de sequência.
 
 ## Novidades da V1.07
 - O contador da bandeira agora representa a **sequência diária de vitórias (streak)**.
