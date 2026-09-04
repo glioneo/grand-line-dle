@@ -55,13 +55,52 @@ function add(x){
   rows.prepend(r)
 }
 
-function dayKey(){const d=new Date();return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
-function playedDays(){try{return JSON.parse(localStorage.getItem("gld_played_days")||"[]")}catch{return[]}}
-function updateStats(){const el=document.querySelector("#playedDays");if(el)el.textContent=playedDays().length}
-function markPlayed(){
-  const days=playedDays(),k=dayKey();
-  if(!days.includes(k)){days.push(k);localStorage.setItem("gld_played_days",JSON.stringify(days))}
-  updateStats()
+function dayKey(d=new Date()){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+const STATS_KEY="gld_stats_v107",GAME_KEY="gld_daily_game_v107";
+function defaultStats(){return{wins:0,streak:0,bestStreak:0,lastWin:null,distribution:{"1":0,"2":0,"3":0,"4":0,"5":0,"6+":0}}}
+function loadStats(){try{return{...defaultStats(),...JSON.parse(localStorage.getItem(STATS_KEY)||"{}")}}catch{return defaultStats()}}
+function saveStats(s){localStorage.setItem(STATS_KEY,JSON.stringify(s))}
+function yesterdayKey(){const d=new Date();d.setDate(d.getDate()-1);return dayKey(d)}
+function effectiveStreak(s){return s.lastWin&&(s.lastWin===dayKey()||s.lastWin===yesterdayKey())?s.streak:0}
+function flagTier(streak){
+  if(streak>=101)return"jolly";
+  if(streak>=91)return"black";
+  if(streak>=81)return"purple";
+  if(streak>=71)return"blue-dark";
+  if(streak>=61)return"blue-light";
+  if(streak>=51)return"green";
+  if(streak>=41)return"red";
+  if(streak>=31)return"orange";
+  if(streak>=21)return"pink";
+  if(streak>=11)return"yellow";
+  return"white"
+}
+function updateStats(){
+  const s=loadStats(),streak=effectiveStreak(s);
+  const flag=document.querySelector("#streakFlag"),num=document.querySelector("#streakCount");
+  if(flag){
+    const tier=flagTier(streak),img=flag.querySelector(".flagArt"),assetTier=tier==="jolly"?"black":tier;
+    flag.dataset.tier=tier;
+    if(img)img.src=`images/flags/days-flag-${assetTier}.png`;
+  }
+  if(num){num.textContent=streak;num.dataset.digits=String(streak).length;}
+  const vals={statWins:s.wins,statStreak:streak,statBest:s.bestStreak};
+  Object.entries(vals).forEach(([id,v])=>{const el=document.querySelector(`#${id}`);if(el)el.textContent=v});
+  const max=Math.max(1,...Object.values(s.distribution||{}));
+  ["1","2","3","4","5","6+"].forEach(k=>{const v=(s.distribution||{})[k]||0,id=k==="6+"?"6p":k;const bar=document.querySelector(`#bar${id}`),n=document.querySelector(`#dist${id}`);if(bar)bar.style.width=`${v/max*100}%`;if(n)n.textContent=v});
+}
+function recordWin(attempts){
+  const s=loadStats(),today=dayKey();if(s.lastWin===today)return;
+  s.streak=s.lastWin===yesterdayKey()?s.streak+1:1;s.bestStreak=Math.max(s.bestStreak,s.streak);s.lastWin=today;s.wins++;
+  const bucket=attempts>=6?"6+":String(attempts);s.distribution={...defaultStats().distribution,...s.distribution};s.distribution[bucket]++;
+  saveStats(s);updateStats()
+}
+function loadGame(){try{const g=JSON.parse(localStorage.getItem(GAME_KEY)||"null");return g&&g.day===dayKey()?g:null}catch{return null}}
+function saveGame(won=false){localStorage.setItem(GAME_KEY,JSON.stringify({day:dayKey(),answer:answer.name,guesses:[...guessed],won}))}
+function restoreGame(){
+  const g=loadGame();if(!g||g.answer!==answer.name)return;
+  (g.guesses||[]).forEach(name=>{const x=CHARACTERS.find(c=>c.name===name);if(x){guessed.add(x.name);add(x)}});
+  if(g.won){done=true;q.disabled=go.disabled=true;wintext.textContent=`${answer.name} em ${guessed.size} tentativa${guessed.size>1?"s":""}.`;win.classList.remove("hidden")}
 }
 function matchesInput(x,value){
   const z=norm(value);
@@ -72,12 +111,12 @@ function submit(){
   let x=CHARACTERS.find(c=>matchesInput(c,q.value.trim()));
   if(!x){msg.textContent="Escolha um personagem da lista.";return}
   if(guessed.has(x.name)){msg.textContent="Você já tentou esse personagem.";return}
-  guessed.add(x.name);markPlayed();add(x);q.value="";msg.textContent="";sugs.style.display="none";
+  guessed.add(x.name);add(x);q.value="";msg.textContent="";sugs.style.display="none";
   if(x.name===answer.name){
     done=true;q.disabled=go.disabled=true;
     wintext.textContent=`${answer.name} em ${guessed.size} tentativa${guessed.size>1?"s":""}.`;
-    win.classList.remove("hidden")
-  }else q.focus()
+    win.classList.remove("hidden");recordWin(guessed.size);saveGame(true)
+  }else{saveGame(false);q.focus()}
 }
 function startsWithAnyPart(value,z){
   return norm(value).split(/\s+/).some(part=>part.startsWith(z))
@@ -104,5 +143,6 @@ q.onkeydown=e=>{
   if(e.key==="Enter"){e.preventDefault();const chosen=(sugIndex>=0&&items[sugIndex])?items[sugIndex]:items[0];if(chosen&&sugs.style.display!=="none"){q.value=chosen.dataset.n;sugs.style.display="none";sugIndex=-1;submit()}else submit()}
 };
 go.onclick=submit;
+restoreGame();
 updateStats();
-q.focus();
+if(!done)q.focus();
