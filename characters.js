@@ -14,7 +14,12 @@ const CHARACTERS=[
     ],
     "bounty": 3000000000,
     "height": 1.74,
-    "arc": "Romance Dawn"
+    "arc": "Romance Dawn",
+    "aliases": [
+      "Chapéu de Palha",
+      "Straw Hat",
+      "Lucy"
+    ]
   },
   {
     "name": "Roronoa Zoro",
@@ -31,7 +36,12 @@ const CHARACTERS=[
     ],
     "bounty": 1111000000,
     "height": 1.81,
-    "arc": "Romance Dawn"
+    "arc": "Romance Dawn",
+    "aliases": [
+      "Caçador de Piratas",
+      "Pirate Hunter",
+      "Zorojuro"
+    ]
   },
   {
     "name": "Nami",
@@ -44,7 +54,11 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 366000000,
     "height": 1.7,
-    "arc": "Orange Town"
+    "arc": "Orange Town",
+    "aliases": [
+      "Gata Ladra",
+      "Cat Burglar"
+    ]
   },
   {
     "name": "Usopp",
@@ -59,7 +73,12 @@ const CHARACTERS=[
     ],
     "bounty": 500000000,
     "height": 1.76,
-    "arc": "Syrup Village"
+    "arc": "Syrup Village",
+    "aliases": [
+      "Sogeking",
+      "God Usopp",
+      "Deus Usopp"
+    ]
   },
   {
     "name": "Sanji",
@@ -75,7 +94,12 @@ const CHARACTERS=[
     ],
     "bounty": 1032000000,
     "height": 1.8,
-    "arc": "Baratie"
+    "arc": "Baratie",
+    "aliases": [
+      "Perna Negra",
+      "Black Leg",
+      "Soba Mask"
+    ]
   },
   {
     "name": "Tony Tony Chopper",
@@ -88,7 +112,11 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 1000,
     "height": 0.9,
-    "arc": "Drum Island"
+    "arc": "Drum Island",
+    "aliases": [
+      "Amante de Algodão-Doce",
+      "Cotton Candy Lover"
+    ]
   },
   {
     "name": "Nico Robin",
@@ -101,7 +129,12 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 930000000,
     "height": 1.88,
-    "arc": "Whisky Peak"
+    "arc": "Whisky Peak",
+    "aliases": [
+      "Miss All Sunday",
+      "Criança Demônio",
+      "Devil Child"
+    ]
   },
   {
     "name": "Franky",
@@ -114,7 +147,12 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 394000000,
     "height": 2.4,
-    "arc": "Water 7"
+    "arc": "Water 7",
+    "aliases": [
+      "Cutty Flam",
+      "Cyborg Franky",
+      "Franky Shogun"
+    ]
   },
   {
     "name": "Brook",
@@ -127,7 +165,11 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 383000000,
     "height": 2.77,
-    "arc": "Thriller Bark"
+    "arc": "Thriller Bark",
+    "aliases": [
+      "Soul King",
+      "Humming Brook"
+    ]
   },
   {
     "name": "Jinbe",
@@ -143,7 +185,12 @@ const CHARACTERS=[
     ],
     "bounty": 1100000000,
     "height": 3.01,
-    "arc": "Impel Down"
+    "arc": "Impel Down",
+    "aliases": [
+      "Cavaleiro do Mar",
+      "First Son of the Sea",
+      "Knight of the Sea"
+    ]
   },
   {
     "name": "Trafalgar D. Water Law",
@@ -159,7 +206,11 @@ const CHARACTERS=[
     ],
     "bounty": 3000000000,
     "height": 1.91,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Cirurgião da Morte",
+      "Surgeon of Death"
+    ]
   },
   {
     "name": "Eustass Kid",
@@ -176,7 +227,11 @@ const CHARACTERS=[
     ],
     "bounty": 3000000000,
     "height": 2.05,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Captain Kid",
+      "Capitão Kid"
+    ]
   },
   {
     "name": "Shanks",
@@ -193,7 +248,12 @@ const CHARACTERS=[
     ],
     "bounty": 4048900000,
     "height": 1.99,
-    "arc": "Romance Dawn"
+    "arc": "Romance Dawn",
+    "aliases": [
+      "Red-Haired Shanks",
+      "Red Hair",
+      "Ruivo"
+    ]
   },
   {
     "name": "Marshall D. Teach",
@@ -209,7 +269,11 @@ const CHARACTERS=[
     ],
     "bounty": 3996000000,
     "height": 3.44,
-    "arc": "Jaya"
+    "arc": "Jaya",
+    "aliases": [
+      "Blackbeard",
+      "Barba Negra"
+    ]
   },
   {
     "name": "Marco",
@@ -225,7 +289,12 @@ const CHARACTERS=[
     ],
     "bounty": 1374000000,
     "height": 2.03,
-    "arc": "Jaya"
+    "arc": "Jaya",
+    "aliases": [
+      "Marco the Phoenix",
+      "Fênix",
+      "Phoenix"
+    ]
   },
   {
     "name": "Kaido",
@@ -242,7 +311,12 @@ const CHARACTERS=[
     ],
     "bounty": 4611100000,
     "height": 7.1,
-    "arc": "Dressrosa"
+    "arc": "Dressrosa",
+    "aliases": [
+      "Kaido das Feras",
+      "King of the Beasts",
+      "Strongest Creature"
+    ]
   },
   {
     "name": "Charlotte Linlin",
@@ -336,7 +410,12 @@ const CHARACTERS=[
     ],
     "bounty": 1659000000,
     "height": 1.91,
-    "arc": "Amazon Lily"
+    "arc": "Amazon Lily",
+    "aliases": [
+      "Imperatriz Pirata",
+      "Pirate Empress",
+      "Snake Princess"
+    ]
   },
   {
     "name": "Buggy",
@@ -349,7 +428,11 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 3189000000,
     "height": 1.92,
-    "arc": "Orange Town"
+    "arc": "Orange Town",
+    "aliases": [
+      "Buggy the Clown",
+      "Star Clown"
+    ]
   },
   {
     "name": "Donquixote Doflamingo",
@@ -366,7 +449,13 @@ const CHARACTERS=[
     ],
     "bounty": 340000000,
     "height": 3.05,
-    "arc": "Jaya"
+    "arc": "Jaya",
+    "aliases": [
+      "Joker",
+      "Demônio Celestial",
+      "Heavenly Demon",
+      "Heavenly Yaksha"
+    ]
   },
   {
     "name": "Dracule Mihawk",
@@ -382,7 +471,12 @@ const CHARACTERS=[
     ],
     "bounty": 3590000000,
     "height": 1.98,
-    "arc": "Baratie"
+    "arc": "Baratie",
+    "aliases": [
+      "Olhos de Falcão",
+      "Hawk-Eye",
+      "Hawkeye"
+    ]
   },
   {
     "name": "Gol D. Roger",
@@ -399,7 +493,12 @@ const CHARACTERS=[
     ],
     "bounty": 5564800000,
     "height": 2.74,
-    "arc": "Romance Dawn"
+    "arc": "Romance Dawn",
+    "aliases": [
+      "Gold Roger",
+      "Rei dos Piratas",
+      "Pirate King"
+    ]
   },
   {
     "name": "Dorry",
@@ -454,7 +553,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 2.12,
-    "arc": "Water 7"
+    "arc": "Water 7",
+    "aliases": [
+      "Arma de Massacre",
+      "Massacre Weapon"
+    ]
   },
   {
     "name": "Kaku",
@@ -640,7 +743,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 0,
     "height": 2.93,
-    "arc": "Dressrosa"
+    "arc": "Dressrosa",
+    "aliases": [
+      "Corazon"
+    ]
   },
   {
     "name": "Sugar",
@@ -819,7 +925,10 @@ const CHARACTERS=[
     ],
     "bounty": 195000000,
     "height": 2.4,
-    "arc": "Jaya"
+    "arc": "Jaya",
+    "aliases": [
+      "Hyena"
+    ]
   },
   {
     "name": "Kyuin",
@@ -1041,7 +1150,11 @@ const CHARACTERS=[
     ],
     "bounty": 330000000,
     "height": 2.08,
-    "arc": "Dressrosa"
+    "arc": "Dressrosa",
+    "aliases": [
+      "Hakuba",
+      "White Horse"
+    ]
   },
   {
     "name": "Bartolomeo",
@@ -1054,7 +1167,11 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 200000000,
     "height": 2.2,
-    "arc": "Dressrosa"
+    "arc": "Dressrosa",
+    "aliases": [
+      "Cannibal",
+      "Canibal"
+    ]
   },
   {
     "name": "Sai",
@@ -1141,7 +1258,10 @@ const CHARACTERS=[
     ],
     "bounty": 1965000000,
     "height": 2.53,
-    "arc": "Whisky Peak"
+    "arc": "Whisky Peak",
+    "aliases": [
+      "Mr. 0"
+    ]
   },
   {
     "name": "Daz Bonez",
@@ -1154,7 +1274,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 75000000,
     "height": 2.12,
-    "arc": "Whisky Peak"
+    "arc": "Whisky Peak",
+    "aliases": [
+      "Mr. 1"
+    ]
   },
   {
     "name": "Galdino",
@@ -1167,7 +1290,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 24000000,
     "height": 1.79,
-    "arc": "Little Garden"
+    "arc": "Little Garden",
+    "aliases": [
+      "Mr. 3"
+    ]
   },
   {
     "name": "Alvida",
@@ -1235,7 +1361,10 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 2.7,
-    "arc": "Dressrosa"
+    "arc": "Dressrosa",
+    "aliases": [
+      "Fujitora"
+    ]
   },
   {
     "name": "Aramaki",
@@ -1272,7 +1401,12 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 2.87,
-    "arc": "Water 7"
+    "arc": "Water 7",
+    "aliases": [
+      "Herói da Marinha",
+      "Hero of the Marines",
+      "Garp the Fist"
+    ]
   },
   {
     "name": "Tsuru",
@@ -1440,7 +1574,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 2.78,
-    "arc": "Jaya"
+    "arc": "Jaya",
+    "aliases": [
+      "Sengoku the Buddha",
+      "Buddha"
+    ]
   },
   {
     "name": "X Drake",
@@ -1456,7 +1594,10 @@ const CHARACTERS=[
     ],
     "bounty": 222000000,
     "height": 2.33,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Red Flag"
+    ]
   },
   {
     "name": "Jaguar D. Saul",
@@ -1537,7 +1678,11 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 300000000,
     "height": 3.09,
-    "arc": "Punk Hazard"
+    "arc": "Punk Hazard",
+    "aliases": [
+      "Master",
+      "Gangster Gastino"
+    ]
   },
   {
     "name": "Wapol",
@@ -1796,7 +1941,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 0,
     "height": 2.18,
-    "arc": "Whisky Peak"
+    "arc": "Whisky Peak",
+    "aliases": [
+      "Mr. 8"
+    ]
   },
   {
     "name": "Miss Monday",
@@ -1822,7 +1970,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 35000000,
     "height": 1.87,
-    "arc": "Alabasta"
+    "arc": "Alabasta",
+    "aliases": [
+      "Miss Doublefinger"
+    ]
   },
   {
     "name": "Bentham",
@@ -1835,7 +1986,13 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 32000000,
     "height": 2.38,
-    "arc": "Alabasta"
+    "arc": "Alabasta",
+    "aliases": [
+      "Mr. 2",
+      "Mr. 2 Bon Kurei",
+      "Bon Kurei",
+      "Bon Clay"
+    ]
   },
   {
     "name": "Miss Goldenweek",
@@ -1861,7 +2018,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 3200000,
     "height": 2.18,
-    "arc": "Alabasta"
+    "arc": "Alabasta",
+    "aliases": [
+      "Babe"
+    ]
   },
   {
     "name": "Drophy",
@@ -1874,7 +2034,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 14000000,
     "height": 1.56,
-    "arc": "Alabasta"
+    "arc": "Alabasta",
+    "aliases": [
+      "Miss Merry Christmas"
+    ]
   },
   {
     "name": "Gem",
@@ -1887,7 +2050,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 10000000,
     "height": 1.97,
-    "arc": "Little Garden"
+    "arc": "Little Garden",
+    "aliases": [
+      "Mr. 5"
+    ]
   },
   {
     "name": "Mikita",
@@ -1900,7 +2066,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 7500000,
     "height": 1.77,
-    "arc": "Whisky Peak"
+    "arc": "Whisky Peak",
+    "aliases": [
+      "Miss Valentine"
+    ]
   },
   {
     "name": "Gecko Moria",
@@ -2010,7 +2179,11 @@ const CHARACTERS=[
     ],
     "bounty": 296000000,
     "height": 6.89,
-    "arc": "Thriller Bark"
+    "arc": "Thriller Bark",
+    "aliases": [
+      "Tyrant",
+      "Tirano"
+    ]
   },
   {
     "name": "Edward Weevil",
@@ -2091,7 +2264,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 16000000,
     "height": 2.07,
-    "arc": "Syrup Village"
+    "arc": "Syrup Village",
+    "aliases": [
+      "Klahadore"
+    ]
   },
   {
     "name": "Don Krieg",
@@ -2130,7 +2306,12 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 0,
     "height": 2.56,
-    "arc": "Loguetown"
+    "arc": "Loguetown",
+    "aliases": [
+      "Revolucionário Dragon",
+      "World’s Worst Criminal",
+      "Worlds Worst Criminal"
+    ]
   },
   {
     "name": "Emporio Ivankov",
@@ -2146,7 +2327,12 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 4.49,
-    "arc": "Impel Down"
+    "arc": "Impel Down",
+    "aliases": [
+      "Iva",
+      "Ivankov",
+      "Miracle Person"
+    ]
   },
   {
     "name": "Koala",
@@ -2227,7 +2413,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 0,
     "height": 1.69,
-    "arc": "Whisky Peak"
+    "arc": "Whisky Peak",
+    "aliases": [
+      "Miss Wednesday"
+    ]
   },
   {
     "name": "Nefertari Cobra",
@@ -2406,7 +2595,11 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 24000000,
     "height": 1.8,
-    "arc": "Long Ring Long Land"
+    "arc": "Long Ring Long Land",
+    "aliases": [
+      "Silver Fox",
+      "Raposa Prateada"
+    ]
   },
   {
     "name": "Iceburg",
@@ -2488,7 +2681,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 1.88,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Dark King",
+      "Rei das Trevas"
+    ]
   },
   {
     "name": "Kozuki Oden",
@@ -2549,7 +2746,10 @@ const CHARACTERS=[
     ],
     "bounty": 350000000,
     "height": 1.66,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Gang Bege"
+    ]
   },
   {
     "name": "Jewelry Bonney",
@@ -2565,7 +2765,11 @@ const CHARACTERS=[
     ],
     "bounty": 320000000,
     "height": 1.74,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Big Eater",
+      "Glutona"
+    ]
   },
   {
     "name": "Basil Hawkins",
@@ -2581,7 +2785,11 @@ const CHARACTERS=[
     ],
     "bounty": 320000000,
     "height": 2.1,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Magician",
+      "Mágico"
+    ]
   },
   {
     "name": "Scratchmen Apoo",
@@ -2597,7 +2805,11 @@ const CHARACTERS=[
     ],
     "bounty": 350000000,
     "height": 2.56,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Roar of the Sea",
+      "Sea Roar"
+    ]
   },
   {
     "name": "Killer",
@@ -2613,7 +2825,11 @@ const CHARACTERS=[
     ],
     "bounty": 200000000,
     "height": 1.95,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Kamazo",
+      "Massacre Soldier"
+    ]
   },
   {
     "name": "Urouge",
@@ -2629,7 +2845,11 @@ const CHARACTERS=[
     ],
     "bounty": 108000000,
     "height": 3.88,
-    "arc": "Sabaody"
+    "arc": "Sabaody",
+    "aliases": [
+      "Mad Monk",
+      "Monge Louco"
+    ]
   },
   {
     "name": "Hannyabal",
@@ -2672,7 +2892,11 @@ const CHARACTERS=[
     ],
     "bounty": 5046000000,
     "height": 6.66,
-    "arc": "Marineford"
+    "arc": "Marineford",
+    "aliases": [
+      "Whitebeard",
+      "Barba Branca"
+    ]
   },
   {
     "name": "Portgas D. Ace",
@@ -2688,7 +2912,11 @@ const CHARACTERS=[
     ],
     "bounty": 550000000,
     "height": 1.85,
-    "arc": "Marineford"
+    "arc": "Drum Island",
+    "aliases": [
+      "Fire Fist Ace",
+      "Punho de Fogo"
+    ]
   },
   {
     "name": "Jozu",
@@ -2704,7 +2932,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 5.03,
-    "arc": "Marineford"
+    "arc": "Marineford",
+    "aliases": [
+      "Diamond Jozu",
+      "Jozu Diamante"
+    ]
   },
   {
     "name": "Vista",
@@ -2720,7 +2952,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 3.28,
-    "arc": "Marineford"
+    "arc": "Marineford",
+    "aliases": [
+      "Flower Sword",
+      "Espada Floral"
+    ]
   },
   {
     "name": "Izo",
@@ -2794,7 +3030,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 3.06,
-    "arc": "Wano"
+    "arc": "Wano",
+    "aliases": [
+      "Kyoshiro",
+      "Witching Hour Boy"
+    ]
   },
   {
     "name": "Kikunojo",
@@ -2810,7 +3050,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 2.87,
-    "arc": "Wano"
+    "arc": "Wano",
+    "aliases": [
+      "O-Kiku",
+      "Okiku"
+    ]
   },
   {
     "name": "Raizo",
@@ -3170,7 +3414,11 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 1.0,
-    "arc": "Wano"
+    "arc": "Wano",
+    "aliases": [
+      "Grandpa Hyo",
+      "Hyo"
+    ]
   },
   {
     "name": "King",
@@ -3186,7 +3434,10 @@ const CHARACTERS=[
     ],
     "bounty": 1390000000,
     "height": 6.13,
-    "arc": "Wano"
+    "arc": "Wano",
+    "aliases": [
+      "Arber"
+    ]
   },
   {
     "name": "Queen",
@@ -3279,7 +3530,10 @@ const CHARACTERS=[
     "haki_types": [],
     "bounty": 0,
     "height": 1.7,
-    "arc": "Wano"
+    "arc": "Wano",
+    "aliases": [
+      "Komurasaki"
+    ]
   },
   {
     "name": "Charlotte Perospero",
@@ -3555,7 +3809,11 @@ const CHARACTERS=[
     ],
     "bounty": 500000000,
     "height": 2.09,
-    "arc": "Loguetown"
+    "arc": "Loguetown",
+    "aliases": [
+      "Caçador Branco",
+      "White Chase"
+    ]
   },
   {
     "name": "Koby",

@@ -1,6 +1,8 @@
 const q=document.querySelector("#q"),go=document.querySelector("#go"),sugs=document.querySelector("#sugs"),rows=document.querySelector("#rows"),msg=document.querySelector("#msg"),win=document.querySelector("#win"),wintext=document.querySelector("#wintext");
 let guessed=new Set(),done=false,sugIndex=-1;
 const norm=s=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const searchNorm=s=>norm(s).replace(/[^a-z0-9]+/g," ").trim();
+const compactNorm=s=>searchNorm(s).replace(/\s+/g,"");
 
 function seededShuffle(list){
   const a=[...list];
@@ -9,12 +11,13 @@ function seededShuffle(list){
   for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]]}
   return a;
 }
-function daily(){
+function dailyForDate(d=new Date()){
   const pool=seededShuffle(CHARACTERS.filter(x=>x.daily!==false));
-  const d=new Date();
   const day=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/86400000);
   return pool[day%pool.length];
 }
+function daily(){return dailyForDate(new Date())}
+function yesterdayCharacter(){const d=new Date();d.setDate(d.getDate()-1);return dailyForDate(d)}
 const answer=daily();
 
 function bounty(n){
@@ -81,7 +84,8 @@ function updateStats(){
   if(flag){
     const tier=flagTier(streak),img=flag.querySelector(".flagArt")||flag.querySelector("img"),assetTier=tier==="jolly"?"black":tier;
     flag.dataset.tier=tier;
-    if(img){img.classList.add("flagArt");img.src=`images/flags/days-flag-${assetTier}.png`;}
+    const src=`images/flags/days-flag-${assetTier}.webp`;
+    if(img){img.classList.add("flagArt");img.src=src;}
   }
   if(num){num.textContent=streak;num.dataset.digits=String(streak).length;}
   const vals={statWins:s.wins,statStreak:streak,statBest:s.bestStreak};
@@ -103,8 +107,8 @@ function restoreGame(){
   if(g.won){done=true;q.disabled=go.disabled=true;wintext.textContent=`${answer.name} em ${guessed.size} tentativa${guessed.size>1?"s":""}.`;win.classList.remove("hidden")}
 }
 function matchesInput(x,value){
-  const z=norm(value);
-  return norm(x.name)===z||(x.aliases||[]).some(a=>norm(a)===z)
+  const z=compactNorm(value);
+  return compactNorm(x.name)===z||(x.aliases||[]).some(a=>compactNorm(a)===z)
 }
 function submit(){
   if(done)return;
@@ -119,11 +123,12 @@ function submit(){
   }else{saveGame(false);q.focus()}
 }
 function startsWithAnyPart(value,z){
-  return norm(value).split(/\s+/).some(part=>part.startsWith(z))
+  const clean=searchNorm(value),compact=compactNorm(value),zClean=searchNorm(z),zCompact=compactNorm(z);
+  return clean.split(/\s+/).some(part=>part.startsWith(zClean))||compact.startsWith(zCompact)
 }
 function suggest(){
-  let z=norm(q.value.trim());
-  if(!z){sugs.style.display="none";return}
+  let z=q.value.trim();
+  if(!searchNorm(z)){sugs.style.display="none";return}
   let m=CHARACTERS.filter(x=>(startsWithAnyPart(x.name,z)||(x.aliases||[]).some(a=>startsWithAnyPart(a,z)))&&!guessed.has(x.name)).slice(0,20);
   sugIndex=-1;
   sugs.innerHTML=m.map(x=>{
@@ -135,6 +140,15 @@ function suggest(){
   sugs.style.display=m.length?"block":"none";
   document.querySelectorAll(".sug").forEach(e=>e.onclick=()=>{q.value=e.dataset.n;sugs.style.display="none";submit()})
 }
+
+function updateYesterday(){
+  const x=yesterdayCharacter(),box=document.querySelector("#yesterdayCharacter");
+  if(!box)return;
+  const photo=box.querySelector(".yesterdayPhoto"),name=box.querySelector(".yesterdayName");
+  if(photo){photo.src=`images/characters/${x.image}`;photo.alt=x.name;}
+  if(name)name.textContent=x.name;
+}
+
 q.oninput=suggest;
 q.onkeydown=e=>{
   const items=[...sugs.querySelectorAll(".sug")];
@@ -145,4 +159,5 @@ q.onkeydown=e=>{
 go.onclick=submit;
 restoreGame();
 updateStats();
+updateYesterday();
 if(!done)q.focus();
