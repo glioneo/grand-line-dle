@@ -97,3 +97,214 @@ body {
 .yesterdayCard{display:flex;align-items:center;justify-content:center;gap:12px}
 .yesterdayPhoto{width:54px;height:54px;border-radius:8px;object-fit:contain;object-position:center;border:1px solid #4a6277;background:#091723;padding:2px}
 .yesterdayName{font-size:16px;color:#fff}
+
+
+/* V1.08.1 Teste 4 — comemoração encorpada em ondas */
+.victoryCelebration{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  pointer-events:none;
+  overflow:hidden;
+}
+.victoryCelebrationFull::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:0;
+  background:radial-gradient(circle at 50% 100%,rgba(255,210,85,.16),transparent 48%);
+  animation:celebrationGlow 1.15s ease-out forwards;
+}
+.baseBurstRich{
+  position:absolute;
+  bottom:-9px;
+  width:26px;
+  height:26px;
+  transform:translateX(-50%) scale(0);
+  border-radius:50%;
+  opacity:0;
+  background:#fff;
+  box-shadow:
+    0 0 20px 9px #fff3a0,
+    0 0 48px 23px rgba(255,153,42,.92),
+    0 0 95px 42px rgba(255,64,28,.42);
+  animation:baseBlastRich .82s ease-out forwards;
+}
+.baseSmokeRich{
+  position:absolute;
+  bottom:-12px;
+  width:56px;
+  height:38px;
+  transform:translateX(-50%) scale(.35);
+  opacity:0;
+  border-radius:50%;
+  background:rgba(235,239,241,.72);
+  box-shadow:
+    -25px 8px 0 rgba(196,205,211,.42),
+    27px 7px 0 rgba(206,215,220,.48),
+    4px -20px 0 rgba(240,242,243,.48);
+  animation:baseSmokeRich 1.55s ease-out forwards;
+}
+.victorySpark{
+  --sx:0px;--sy:160px;--sd:0ms;--sc:#ffd34e;
+  position:absolute;
+  bottom:4px;
+  width:4px;
+  height:10px;
+  border-radius:50%;
+  background:var(--sc);
+  box-shadow:0 0 8px 2px var(--sc);
+  opacity:0;
+  animation:sparkLaunch 1.05s var(--sd) ease-out forwards;
+}
+.screenConfettiRich{
+  --dx:0px;--rise:500px;--fall:400px;--drift:0px;--spin:900deg;
+  --delay:0ms;--c:#ffd34e;--w:7px;--h:13px;--sway:30px;
+  position:absolute;
+  bottom:-14px;
+  width:var(--w);
+  height:var(--h);
+  border-radius:1px;
+  background:var(--c);
+  opacity:0;
+  box-shadow:0 0 3px rgba(255,255,255,.32);
+  will-change:transform,opacity;
+  backface-visibility:hidden;
+  animation:confettiRich 3.8s var(--delay) cubic-bezier(.18,.62,.28,1) forwards;
+}
+.victoryPulse{
+  position:absolute;
+  left:50%;
+  bottom:-30px;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  transform:translateX(-50%) scale(.2);
+  opacity:0;
+  border:3px solid rgba(255,226,120,.75);
+  box-shadow:0 0 40px rgba(255,190,60,.35);
+  animation:victoryPulse .8s 40ms ease-out forwards;
+}
+@keyframes celebrationGlow{
+  0%{opacity:0}
+  14%{opacity:1}
+  100%{opacity:0}
+}
+@keyframes baseBlastRich{
+  0%{opacity:0;transform:translateX(-50%) scale(.08)}
+  14%{opacity:1;transform:translateX(-50%) scale(1.35)}
+  100%{opacity:0;transform:translateX(-50%) scale(4.5)}
+}
+@keyframes baseSmokeRich{
+  0%{opacity:0;transform:translateX(-50%) translateY(0) scale(.3)}
+  18%{opacity:.72}
+  100%{opacity:0;transform:translateX(-50%) translateY(-120px) scale(1.9)}
+}
+@keyframes sparkLaunch{
+  0%{opacity:0;transform:translate(0,0) rotate(0)}
+  10%{opacity:1}
+  68%{opacity:1}
+  100%{opacity:0;transform:translate(var(--sx),calc(var(--sy) * -1)) rotate(180deg) scale(.25)}
+}
+@keyframes confettiRich{
+  0%{
+    opacity:0;
+    transform:translate3d(0,0,0) rotate(0deg) scale(.55);
+  }
+  5%{opacity:1}
+  12%{
+    transform:translate3d(
+      calc(var(--dx) * .25),
+      calc(var(--rise) * -.38),
+      0
+    ) rotate(calc(var(--spin) * .18)) scale(.88);
+  }
+  24%{
+    opacity:1;
+    transform:translate3d(
+      calc(var(--dx) * .55),
+      calc(var(--rise) * -.72),
+      0
+    ) rotate(calc(var(--spin) * .42)) scale(1);
+  }
+  38%{
+    transform:translate3d(
+      calc(var(--dx) * .82),
+      calc(var(--rise) * -.93),
+      0
+    ) rotate(calc(var(--spin) * .70)) scale(1);
+  }
+  48%{
+    opacity:1;
+    transform:translate3d(
+      var(--dx),
+      calc(var(--rise) * -1),
+      0
+    ) rotate(var(--spin)) scale(1);
+  }
+  58%{
+    transform:translate3d(
+      calc(var(--dx) + var(--sway) * .45),
+      calc(var(--rise) * -1 + var(--fall) * .07),
+      0
+    ) rotate(calc(var(--spin) * 1.12)) scale(.98);
+  }
+  68%{
+    transform:translate3d(
+      calc(var(--dx) - var(--sway) * .35),
+      calc(var(--rise) * -1 + var(--fall) * .20),
+      0
+    ) rotate(calc(var(--spin) * 1.27)) scale(.95);
+  }
+  78%{
+    opacity:1;
+    transform:translate3d(
+      calc(var(--dx) + var(--sway) * .55),
+      calc(var(--rise) * -1 + var(--fall) * .39),
+      0
+    ) rotate(calc(var(--spin) * 1.43)) scale(.91);
+  }
+  88%{
+    transform:translate3d(
+      calc(var(--dx) - var(--sway) * .22),
+      calc(var(--rise) * -1 + var(--fall) * .65),
+      0
+    ) rotate(calc(var(--spin) * 1.62)) scale(.84);
+  }
+  96%{opacity:.72}
+  100%{
+    opacity:0;
+    transform:translate3d(
+      calc(var(--dx) + var(--drift)),
+      calc(var(--rise) * -1 + var(--fall)),
+      0
+    ) rotate(calc(var(--spin) * 1.85)) scale(.74);
+  }
+}
+@keyframes victoryPulse{
+  0%{opacity:0;transform:translateX(-50%) scale(.15)}
+  18%{opacity:.9}
+  100%{opacity:0;transform:translateX(-50%) scale(14)}
+}
+@media(max-width:700px){
+  .screenConfettiRich{animation-duration:3.55s}
+}
+@media(prefers-reduced-motion:reduce){
+  .victoryCelebration{display:none}
+}
+
+
+/* V1.08.1 Teste 6 — confetes com física por frame */
+.screenConfettiPhysics{
+  position:fixed;
+  left:0;
+  top:0;
+  bottom:auto;
+  opacity:0;
+  border-radius:1px;
+  box-shadow:0 0 3px rgba(255,255,255,.32);
+  animation:none !important;
+  will-change:transform,opacity;
+  backface-visibility:hidden;
+  transform-origin:center;
+}

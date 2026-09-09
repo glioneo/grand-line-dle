@@ -1,4 +1,10 @@
-# Grand Line Dle V1.08 — Teste 1
+# Grand Line Dle V1.08.1
+
+## V1.08.1 — Comemoração de vitória
+- Ao acertar o personagem do dia, são disparados **3 fogos curtos e coloridos** em pontos diferentes da tela.
+- O efeito dura cerca de 2 segundos, não bloqueia cliques e não interfere no jogo.
+- Os fogos são executados **somente no momento do acerto**. Recarregar a página após uma vitória restaura a partida sem repetir a animação.
+- Respeita a preferência do sistema por redução de movimento (`prefers-reduced-motion`).
 
 ## Novidades da V1.08
 - Adicionado o bloco **Personagem de ontem**, exibindo automaticamente o personagem da data anterior com nome e imagem.
@@ -34,3 +40,34 @@
 - Removida a segunda camada de bandeira que aparecia por trás.
 - Substituído o efeito de esticar via CSS por animações WebP quadro a quadro.
 - O mastro/chapéu permanecem estáveis e a ondulação cresce em direção à ponta do tecido.
+
+### Teste 2 — comemoração pirata
+- Substituído o efeito discreto de fogos por uma comemoração temática.
+- Dois canhões aparecem nos cantos inferiores, disparam com recuo, clarão e fumaça.
+- O disparo gera uma explosão central com chuva de confetes coloridos.
+- O efeito continua sem bloquear cliques e só ocorre no acerto real.
+
+### Teste 3 — explosões na base + confetes em tela cheia
+- Removidos os canhões visíveis.
+- Cinco disparos/explosões surgem diretamente da base da tela, distribuídos pela largura.
+- Cada explosão lança confetes para cima e para os lados, cobrindo praticamente toda a tela antes de caírem.
+- Mantidos clarão e fumaça discretos na origem do disparo.
+
+### Teste 4 — comemoração mais encorpada
+- Mantida a ideia aprovada de explosões partindo diretamente da base, sem canhões visíveis.
+- Os disparos agora acontecem em três ondas sucessivas pela largura da tela.
+- Adicionados clarões mais fortes, fumaça, faíscas de subida e um pulso visual curto no primeiro impacto.
+- Confetes ganharam trajetórias mais variadas, balanço lateral e queda menos uniforme para evitar sensação mecânica/seca.
+
+### Teste 5 — queda suave dos confetes
+- Mantido o visual do Teste 4.
+- A trajetória dos confetes agora possui mais etapas intermediárias, evitando mudanças perceptíveis de posição durante a queda.
+- A subida desacelera gradualmente e a queda acelera de forma contínua, simulando melhor a gravidade.
+- O balanço lateral ficou menor e progressivo.
+- A duração foi levemente aumentada e as transformações usam `translate3d` para favorecer animação mais fluida no navegador.
+
+### Teste 6 — movimento contínuo por frame
+- A queda dos confetes deixou de usar keyframes CSS para posição.
+- Cada confete agora é atualizado a cada frame com `requestAnimationFrame`, velocidade vertical, gravidade, arrasto e rotação contínua.
+- O balanço lateral é calculado continuamente por seno, em vez de alternar entre posições predefinidas.
+- Objetivo: eliminar a sensação de “pular quadros” percebida nos Testes 4 e 5.

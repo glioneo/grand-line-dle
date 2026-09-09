@@ -110,6 +110,115 @@ function matchesInput(x,value){
   const z=compactNorm(value);
   return compactNorm(x.name)===z||(x.aliases||[]).some(a=>compactNorm(a)===z)
 }
+
+/* V1.08.1 - fogos de vitória
+   Executado somente no acerto real; restoreGame() não chama esta função. */
+function launchVictoryFireworks(){
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+
+  document.querySelector("#victoryFireworks")?.remove();
+  const layer=document.createElement("div");
+  layer.id="victoryFireworks";
+  layer.className="victoryCelebration victoryCelebrationFull";
+  layer.setAttribute("aria-hidden","true");
+  document.body.appendChild(layer);
+
+  const colors=["#ffd34e","#ff5f5f","#54d8ff","#70ef8e","#bd8cff","#ff86d3","#ffffff"];
+  const waves=[
+    [{x:18,d:0},{x:82,d:70}],
+    [{x:36,d:300},{x:64,d:360}],
+    [{x:50,d:650},{x:10,d:760},{x:90,d:820}]
+  ];
+
+  const particles=[];
+  const started=performance.now();
+
+  waves.flat().forEach(({x,d})=>{
+    const flash=document.createElement("div");
+    flash.className="baseBurst baseBurstRich";
+    flash.style.left=`${x}%`;
+    flash.style.animationDelay=`${d}ms`;
+    layer.appendChild(flash);
+
+    const smoke=document.createElement("div");
+    smoke.className="baseSmoke baseSmokeRich";
+    smoke.style.left=`${x}%`;
+    smoke.style.animationDelay=`${d+70}ms`;
+    layer.appendChild(smoke);
+
+    for(let i=0;i<10;i++){
+      const s=document.createElement("b");
+      s.className="victorySpark";
+      s.style.left=`${x}%`;
+      s.style.setProperty("--sx",`${(Math.random()-.5)*150}px`);
+      s.style.setProperty("--sy",`${90+Math.random()*190}px`);
+      s.style.setProperty("--sd",`${d+Math.random()*90}ms`);
+      s.style.setProperty("--sc",colors[Math.floor(Math.random()*colors.length)]);
+      layer.appendChild(s);
+    }
+
+    for(let i=0;i<28;i++){
+      const p=document.createElement("i");
+      p.className="screenConfetti screenConfettiPhysics";
+      const w=5+Math.random()*6, h=8+Math.random()*10;
+      p.style.width=`${w}px`;
+      p.style.height=`${h}px`;
+      p.style.background=colors[Math.floor(Math.random()*colors.length)];
+      layer.appendChild(p);
+
+      particles.push({
+        el:p,
+        delay:d+50+Math.random()*170,
+        x:window.innerWidth*x/100,
+        y:window.innerHeight+18,
+        vx:(Math.random()-.5)*(window.innerWidth*.34),
+        vy:-(window.innerHeight*(.72+Math.random()*.34)),
+        gravity:window.innerHeight*(.47+Math.random()*.12),
+        drag:.992+Math.random()*.004,
+        rot:Math.random()*360,
+        vr:(Math.random()-.5)*520,
+        phase:Math.random()*Math.PI*2,
+        sway:10+Math.random()*20,
+        life:4.4+Math.random()*.7
+      });
+    }
+  });
+
+  const pulse=document.createElement("div");
+  pulse.className="victoryPulse";
+  layer.appendChild(pulse);
+
+  let last=started;
+  function animate(now){
+    const frame=Math.min((now-last)/1000,.032);
+    last=now;
+    let alive=false;
+
+    particles.forEach(o=>{
+      const age=(now-started-o.delay)/1000;
+      if(age<0){alive=true;return}
+      if(age>o.life){o.el.style.opacity="0";return}
+      alive=true;
+
+      // Integração por frame: não há mais saltos entre keyframes CSS.
+      o.vy+=o.gravity*frame;
+      o.vx*=Math.pow(o.drag,frame*60);
+      o.x+=o.vx*frame;
+      o.y+=o.vy*frame;
+      o.rot+=o.vr*frame;
+
+      const flutter=Math.sin(age*5.2+o.phase)*o.sway;
+      const fade=age<.12?age/.12:age>o.life-.65?(o.life-age)/.65:1;
+      o.el.style.opacity=Math.max(0,Math.min(1,fade));
+      o.el.style.transform=`translate3d(${o.x+flutter}px,${o.y}px,0) rotate(${o.rot}deg) rotateY(${Math.sin(age*9+o.phase)*72}deg)`;
+    });
+
+    if(alive&&layer.isConnected)requestAnimationFrame(animate);
+    else layer.remove();
+  }
+  requestAnimationFrame(animate);
+  setTimeout(()=>layer.remove(),5700);
+}
 function submit(){
   if(done)return;
   let x=CHARACTERS.find(c=>matchesInput(c,q.value.trim()));
@@ -119,7 +228,7 @@ function submit(){
   if(x.name===answer.name){
     done=true;q.disabled=go.disabled=true;
     wintext.textContent=`${answer.name} em ${guessed.size} tentativa${guessed.size>1?"s":""}.`;
-    win.classList.remove("hidden");recordWin(guessed.size);saveGame(true)
+    win.classList.remove("hidden");launchVictoryFireworks();recordWin(guessed.size);saveGame(true)
   }else{saveGame(false);q.focus()}
 }
 function startsWithAnyPart(value,z){
