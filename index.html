@@ -5,10 +5,58 @@
 <meta property="og:image" content="https://glioneo.github.io/grand-line-dle/share-card.png">
 <meta property="og:url" content="https://glioneo.github.io/grand-line-dle/">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="style.css?v=1.08.0"></head><body><main>
-<header><div class="skull">☠</div><div><h1>GRAND LINE <b>DLE</b> <small>V1.08</small></h1><p>Descubra o personagem de hoje</p></div></header><div id="streakFlag" class="daysFlag" data-tier="white" title="Sequência atual" aria-label="Sequência atual"><img class="flagArt" src="images/flags/days-flag-white.webp" alt=""><strong id="streakCount">0</strong></div>
+<link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="style.css?v=2.0.0"></head><body><main>
+<header><div class="skull">☠</div><div><h1>GRAND LINE <b>DLE</b> <small>V2.0</small></h1><p>Descubra o personagem de hoje</p></div></header><div id="streakFlag" class="daysFlag" data-tier="white" title="Sequência atual" aria-label="Sequência atual"><img class="flagArt" src="images/flags/days-flag-white.webp" alt=""><strong id="streakCount">0</strong></div>
+<nav class="modeNav" aria-label="Modos de jogo">
+<button class="modeTab active" data-mode="classic">CLÁSSICO</button>
+<button class="modeTab" data-mode="silhouette">WANTED</button>
+<button class="modeTab" data-mode="connections">CONEXÕES</button>
+<button class="modeTab" data-mode="timeline">TIMELINE</button>
+<button class="modeTab" data-mode="higherlower">HIGHER/LOWER</button>
+</nav>
+<section id="classicMode" class="modePanel">
 <section class="search"><div class="bar"><input id="q" placeholder="Digite o nome de um personagem..." autocomplete="off"><button id="go">Tentar</button><div id="sugs"></div></div><div id="msg"></div></section>
 <div class="scroll"><div class="grid head"><div>Personagem</div><div>Sexo</div><div>Afiliação</div><div>Origem</div><div>Tipo de fruta</div><div>Haki</div><div>Recompensa</div><div>Altura</div><div>Arco de estreia</div></div><div id="rows"></div></div>
 <section class="legend"><b>LEGENDA:</b><span><i class="g"></i> Verde = exato</span><span><i class="y"></i> Amarelo = parcial</span><span><i class="r"></i> Vermelho = errado</span><span>↑ maior/posterior</span><span>↓ menor/anterior</span></section>
 <section id="win" class="win hidden"><h2>🏴‍☠️ Você encontrou!</h2><p id="wintext"></p></section><section id="yesterdayCharacter" class="yesterdayBox"><h2>☠ PERSONAGEM DE ONTEM ☠</h2><div class="yesterdayCard"><img class="yesterdayPhoto" src="" alt=""><strong class="yesterdayName">—</strong></div></section>
-<section class="statsBox"><h2>☠ ESTATÍSTICAS ☠</h2><div class="statsSummary"><div><strong id="statWins">0</strong><span>Vitórias</span></div><div><strong id="statStreak">0</strong><span>Sequência atual</span></div><div><strong id="statBest">0</strong><span>Melhor sequência</span></div></div><h3>Distribuição de tentativas</h3><div class="distribution"><div class="distRow"><b>1</b><div class="distTrack"><i id="bar1"></i></div><span id="dist1">0</span></div><div class="distRow"><b>2</b><div class="distTrack"><i id="bar2"></i></div><span id="dist2">0</span></div><div class="distRow"><b>3</b><div class="distTrack"><i id="bar3"></i></div><span id="dist3">0</span></div><div class="distRow"><b>4</b><div class="distTrack"><i id="bar4"></i></div><span id="dist4">0</span></div><div class="distRow"><b>5</b><div class="distTrack"><i id="bar5"></i></div><span id="dist5">0</span></div><div class="distRow"><b>6+</b><div class="distTrack"><i id="bar6p"></i></div><span id="dist6p">0</span></div></div></section></main><script src="characters.js?v=1.08.0"></script><script src="app.js?v=1.08.0"></script></body></html>
+<section class="statsBox"><h2>☠ ESTATÍSTICAS ☠</h2><div class="statsSummary"><div><strong id="statWins">0</strong><span>Vitórias</span></div><div><strong id="statStreak">0</strong><span>Sequência atual</span></div><div><strong id="statBest">0</strong><span>Melhor sequência</span></div></div><h3>Distribuição de tentativas</h3><div class="distribution"><div class="distRow"><b>1</b><div class="distTrack"><i id="bar1"></i></div><span id="dist1">0</span></div><div class="distRow"><b>2</b><div class="distTrack"><i id="bar2"></i></div><span id="dist2">0</span></div><div class="distRow"><b>3</b><div class="distTrack"><i id="bar3"></i></div><span id="dist3">0</span></div><div class="distRow"><b>4</b><div class="distTrack"><i id="bar4"></i></div><span id="dist4">0</span></div><div class="distRow"><b>5</b><div class="distTrack"><i id="bar5"></i></div><span id="dist5">0</span></div><div class="distRow"><b>6+</b><div class="distTrack"><i id="bar6p"></i></div><span id="dist6p">0</span></div></div></section>
+</section>
+<section id="silhouetteMode" class="modePanel silhouetteMode hidden">
+  <h2>☠ WANTED DO DIA ☠</h2>
+  <p class="silhouetteIntro">Descubra o personagem do dia através da imagem. A cada erro, ela fica mais nítida.</p>
+  <div class="wantedColorChoice" role="group" aria-label="Modo de cor da imagem"><span>Imagem:</span><button id="wantedColorOn" class="wantedColorBtn active" type="button">Com cor</button><button id="wantedColorOff" class="wantedColorBtn" type="button">Sem cor</button></div>
+  <div id="silStage" class="silhouetteStage stage-0"><img id="silImage" src="" alt="Personagem misterioso"></div>
+  <div class="silAttempts">Tentativas: <span id="silAttempts">0</span></div>
+  <section class="search silhouetteSearch"><div class="bar"><input id="silQ" placeholder="Digite o nome de um personagem..." autocomplete="off"><button id="silGo">Tentar</button><div id="silSugs"></div></div><div id="silMsg"></div></section>
+  <div id="silHistory" class="silHistory"></div>
+  <div id="silResult" class="silResult hidden"></div>
+</section>
+<section id="connectionsMode" class="modePanel connectionsMode hidden">
+  <h2>☠ CONEXÕES DO DIA ☠</h2>
+  <p class="connectionsIntro">Descubra a conexão entre os dois personagens. Respostas erradas liberam pistas progressivamente.</p>
+  <div class="connectionsPair"><article id="connLeft" class="connCard"></article><div class="connLink">🔗</div><article id="connRight" class="connCard"></article></div>
+  <p class="connQuestion">Qual é a conexão entre esses personagens?</p>
+  <section class="connSearch"><div class="bar"><input id="connQ" placeholder="Digite a conexão..." autocomplete="off"><button id="connGo" type="button">Tentar</button></div></section>
+  <div class="connMeta">Erros: <b id="connErrors">0</b></div>
+  <div id="connMsg" class="connMsg"></div><div id="connHints" class="connHints"></div><div id="connResult" class="connResult hidden"></div>
+</section>
+<section id="timelineMode" class="modePanel timelineMode hidden">
+  <h2>☠ TIMELINE DO DIA ☠</h2>
+  <p class="timelineIntro">Encaixe o próximo item na posição correta. A linha cresce até suas 3 vidas acabarem.</p>
+  <div class="timelineMeta"><span id="timelineTheme">Tema: —</span><span id="timelineLives">❤️❤️❤️</span><span>Pontos: <b id="timelineScore">0</b></span><span>Recorde: <b id="timelineBest">0</b></span></div>
+  <div id="timelinePrompt" class="timelinePrompt"></div>
+  <p class="timelineHint">Clique em um espaço da linha para encaixar.</p>
+  <div id="timelineBoard" class="timelineBoard"></div>
+  <div id="timelineMsg" class="timelineMsg"></div>
+  <button id="timelineRestart" class="timelineRestart hidden" type="button">Jogar novamente</button>
+</section>
+<section id="higherlowerMode" class="modePanel higherLowerMode hidden">
+  <h2>☠ HIGHER / LOWER ☠</h2>
+  <p class="hlIntro">Clique no personagem que você acha que tem a maior recompensa. Acerte o máximo que conseguir sem errar.</p>
+  <div class="hlMeta"><span>Pontos: <b id="hlScore">0</b></span><span>Recorde: <b id="hlBest">0</b></span></div>
+  <div class="hlArena">
+    <article id="hlLeft" class="hlCard"></article><div class="hlVs">VS</div><article id="hlRight" class="hlCard"></article>
+  </div>
+  <div id="hlMsg" class="hlMsg"></div><button id="hlRestart" class="hlRestart hidden" type="button">Jogar novamente</button>
+</section>
+</main><script src="characters.js?v=2.0.0"></script><script src="app.js?v=2.0.0"></script><script src="silhouette.js?v=2.0.0"></script><script src="connections.js?v=2.0.0"></script><script src="timeline.js?v=2.0.0"></script><script src="higherlower.js?v=2.0.0"></script></body></html>

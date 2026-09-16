@@ -1,4 +1,24 @@
-# Grand Line Dle V1.08.1
+# Grand Line Dle V2.0
+
+## V2.0 — lançamento dos cinco modos
+- **Clássico**: modo diário original, com comparações, estatísticas, streak e personagem de ontem.
+- **Wanted**: adivinhação pela imagem progressivamente menos desfocada, com opções Com cor / Sem cor e banco completo de 252 imagens.
+- **Conexões**: desafio diário entre dois personagens, com respostas textuais objetivas, aliases e dicas após 2, 4 e 6 erros. Banco inicial experimental com 20 conexões.
+- **Timeline**: ordenação progressiva com tema diário entre Arcos, Recompensas, Altura e Estreia, 3 vidas e recordes por tema.
+- **Higher/Lower**: modo infinito de comparação de recompensas; a escolha é feita clicando diretamente no personagem que o jogador acredita ter a maior recompensa.
+- Mantida a compatibilidade das estatísticas e partidas do modo Clássico com as chaves anteriores de `localStorage`.
+- A fase experimental V1.09 foi encerrada e consolidada nesta versão V2.0.
+
+## Histórico de desenvolvimento
+## V1.09 EXP — Teste 2.5
+- Banco real do modo **WANTED** integrado.
+- **252/252 personagens** do `characters.js` possuem imagem específica em `images/wanted/`.
+- Imagens duplicadas dos pacotes de coleta foram consolidadas em uma única imagem por personagem.
+- Nomes divergentes foram normalizados para os nomes canônicos do jogo.
+- O WANTED não usa mais as fotos quadradas do modo Clássico como fallback.
+- Mantidos os 7 níveis de desfoque e as opções **Com cor / Sem cor**.
+- Auditoria do vínculo das imagens disponível em `WANTED-AUDITORIA.md`.
+
 
 ## V1.08.1 — Comemoração de vitória
 - Ao acertar o personagem do dia, são disparados **3 fogos curtos e coloridos** em pontos diferentes da tela.
@@ -71,3 +91,70 @@
 - Cada confete agora é atualizado a cada frame com `requestAnimationFrame`, velocidade vertical, gravidade, arrasto e rotação contínua.
 - O balanço lateral é calculado continuamente por seno, em vez de alternar entre posições predefinidas.
 - Objetivo: eliminar a sensação de “pular quadros” percebida nos Testes 4 e 5.
+
+## V1.09 EXP — novos modos (teste local)
+- Adicionada navegação por modos: **Clássico**, **Silhueta**, **Conexões**, **Timeline** e **Higher/Lower**.
+- O **Clássico** mantém a lógica, estatísticas e chaves de armazenamento da V1.08.1.
+- Primeira versão funcional do **Silhueta**, com personagem diário, busca por nome/alias, contador de tentativas e revelação ao acertar.
+- **Conexões**, **Timeline** e **Higher/Lower** aparecem na interface como próximos modos, ainda sem alterar o jogo principal.
+- A pasta `images/silhouettes/` foi criada separadamente para não misturar as imagens de corpo/pose com os retratos do modo Clássico.
+- Este pacote é experimental e foi preparado para teste local antes de qualquer publicação.
+
+
+### V1.09 EXP — Teste 2 (Silhueta funcional)
+- O sorteio do Silhueta agora usa todo o elenco diário do `characters.js`; quando a imagem dedicada ainda não está no pacote, o retrato existente é usado temporariamente para o modo continuar jogável.
+- Adicionada revelação visual progressiva em até cinco estágios conforme os erros.
+- Adicionado histórico de palpites, bloqueio de tentativas repetidas e contador persistente.
+- O progresso diário do Silhueta é salvo em `localStorage` e restaurado ao recarregar a página.
+- Ao acertar, a imagem é revelada e o resultado permanece concluído durante o dia.
+- As imagens de corpo/pose disponíveis continuam tendo prioridade sobre os retratos do Clássico.
+
+### V1.09 EXP — Teste 2.3
+- Modo **Silhueta** renomeado visualmente para **Wanted**.
+- Revelação alterada de preto/cinza para desfoque progressivo.
+- A imagem começa muito borrada e fica mais nítida a cada erro.
+- Mantido o dimensionamento ampliado do Teste 2.2.
+
+
+### V1.09 EXP — Teste 2.4
+- Removida a barra/texto que informava o estágio de nitidez do Wanted.
+- O desfoque agora possui **7 níveis**, com progressão mais lenta entre os erros.
+- A imagem permanece parcialmente desfocada mesmo no último nível e só fica totalmente nítida ao acertar.
+- Adicionada a opção **Com cor / Sem cor** para o jogador escolher a dificuldade visual.
+- A preferência de cor fica salva no navegador e pode ser alterada a qualquer momento.
+
+### V1.09 EXP — Teste 3 (Timeline)
+- Aba Timeline agora jogável em modo progressivo.
+- Tema diário rotativo entre Arcos, Recompensas, Altura e Estreia.
+- Linha começa com 2 itens e cresce a cada rodada.
+- 3 vidas; erro revela e insere o item na posição correta.
+- Pontuação e recorde local separados por tema.
+
+- Timeline: cartas agora exibem apenas o item/personagem, sem revelar arco de estreia, recompensa, altura ou número ordinal do arco.
+
+### V1.09 EXP — Teste 4: Higher / Lower
+- Novo modo infinito e rejogável de comparação de recompensas.
+- Usa apenas personagens com recompensa conhecida.
+- O jogador decide se a próxima recompensa é maior ou menor.
+- Confrontos com recompensas idênticas são evitados.
+- Sem repetição de personagem dentro da sequência enquanto houver opções.
+- Pontuação atual e recorde pessoal salvo localmente.
+- Ao errar, a recompensa é revelada e a partida termina; é possível jogar novamente.
+
+
+### V1.09 EXP — Teste 4.1: Higher / Lower
+- Mantida a mesma mecânica do Teste 4.
+- Removidos os botões **MAIOR** e **MENOR**.
+- A escolha agora é feita clicando diretamente no personagem que o jogador acredita ter a maior recompensa.
+- As cartas receberam indicação visual de clique/hover e suporte a teclado.
+
+### V1.09 EXP — Teste 5: Conexões
+- Aba **Conexões** habilitada para teste local.
+- Banco inicial com **20 desafios diários**.
+- Cada desafio mostra dois personagens e exige uma resposta textual objetiva.
+- Respostas são comparadas após normalização de maiúsculas, acentos, pontuação e espaços, mas sem aceitar correspondência parcial.
+- Cada desafio possui resposta principal e aliases aceitos.
+- Resposta errada inédita soma 1 erro; resposta repetida não soma erro.
+- Dicas são liberadas progressivamente com 2, 4 e 6 erros.
+- O progresso do desafio diário fica salvo no navegador.
+- Esta primeira grade é experimental e deve ser auditada durante os testes para remover conexões ambíguas ou forçadas.
