@@ -26,7 +26,7 @@
   if(!left||!right)return;
   const norm=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
   const char=n=>CHARACTERS.find(c=>c.name===n);
-  const day=Math.floor(Date.now()/86400000),challenge=CHALLENGES[day%CHALLENGES.length],KEY=`gld_connections_v109_${day%CHALLENGES.length}`;
+  const d=new Date(),day=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/86400000),challenge=CHALLENGES[day%CHALLENGES.length],KEY=`gld_connections_v201_${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
   let state={errors:0,tried:[],done:false};try{state={...state,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{}
   function card(el,name){const c=char(name);el.innerHTML=c?`<img src="images/characters/${c.image}" alt="${c.name}"><h3>${c.name}</h3>`:`<h3>${name}</h3>`}
   function save(){localStorage.setItem(KEY,JSON.stringify(state))}

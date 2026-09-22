@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glioneo.github.io/grand-line-dle/sitemap.xml

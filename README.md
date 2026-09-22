@@ -1,4 +1,16 @@
-# Grand Line Dle V2.0
+# Grand Line Dle V2.01
+
+## V2.01 — revelação sequencial + SEO
+
+- Corrigida a virada diária do modo **Conexões** para usar a mesma referência de data local dos modos Clássico, Wanted e Timeline.
+- No modo **Clássico**, cada tentativa agora revela os nove campos um de cada vez, criando suspense antes do resultado completo.
+- A busca fica temporariamente bloqueada durante a revelação para impedir tentativas sobrepostas.
+- A vitória e a comemoração só aparecem após a revelação do último campo.
+- A animação respeita `prefers-reduced-motion`; partidas restauradas continuam aparecendo imediatamente.
+- SEO atualizado com descrição dos cinco modos, URL canônica, diretiva de indexação e metadados sociais.
+- Adicionado `robots.txt` apontando para o `sitemap.xml`, que recebeu data de atualização.
+
+# Histórico — V2.0
 
 ## V2.0 — lançamento dos cinco modos
 - **Clássico**: modo diário original, com comparações, estatísticas, streak e personagem de ontem.

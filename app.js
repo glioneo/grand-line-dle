@@ -52,10 +52,20 @@ function characterCard(x){
   const img=x.image?`<img class="character-photo" src="images/characters/${x.image}" alt="${x.name}">`:`<div class="character-placeholder">${x.name.split(" ").map(p=>p[0]).slice(0,2).join("")}</div>`;
   return`<div class="cell character-cell">${img}<div class="character-name">${x.name}</div></div>`
 }
-function add(x){
+function add(x,{animate=false}={}){
   let r=document.createElement("div");r.className="grid row";
   r.innerHTML=`${characterCard(x)}<div class="cell ${c(x.gender,answer.gender)}">${x.gender}</div><div class="cell ${c(x.affiliation,answer.affiliation)}">${x.affiliation}</div><div class="cell ${c(x.origin,answer.origin)}">${x.origin}</div><div class="cell ${c(x.fruit,answer.fruit)}">${x.fruit}</div><div class="cell ${hakiClass(x,answer)}">${x.haki}</div>${bountyNum(x.bounty,answer.bounty)}${num(x.height,answer.height,height)}${arcCell(x.arc)}`;
-  rows.prepend(r)
+  rows.prepend(r);
+  if(!animate||window.matchMedia?.("(prefers-reduced-motion: reduce)").matches)return Promise.resolve();
+  const cells=[...r.children];
+  cells.forEach(cell=>cell.classList.add("cell-reveal-pending"));
+  return new Promise(resolve=>{
+    cells.forEach((cell,i)=>setTimeout(()=>{
+      cell.classList.remove("cell-reveal-pending");
+      cell.classList.add("cell-reveal-in");
+      if(i===cells.length-1)setTimeout(resolve,220);
+    },i*190));
+  });
 }
 
 function dayKey(d=new Date()){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
@@ -219,17 +229,21 @@ function launchVictoryFireworks(){
   requestAnimationFrame(animate);
   setTimeout(()=>layer.remove(),5700);
 }
-function submit(){
-  if(done)return;
+async function submit(){
+  if(done||q.disabled)return;
   let x=CHARACTERS.find(c=>matchesInput(c,q.value.trim()));
   if(!x){msg.textContent="Escolha um personagem da lista.";return}
   if(guessed.has(x.name)){msg.textContent="Você já tentou esse personagem.";return}
-  guessed.add(x.name);add(x);q.value="";msg.textContent="";sugs.style.display="none";
+  guessed.add(x.name);q.value="";msg.textContent="";sugs.style.display="none";
+  q.disabled=go.disabled=true;
+  await add(x,{animate:true});
   if(x.name===answer.name){
-    done=true;q.disabled=go.disabled=true;
+    done=true;
     wintext.textContent=`${answer.name} em ${guessed.size} tentativa${guessed.size>1?"s":""}.`;
     win.classList.remove("hidden");launchVictoryFireworks();recordWin(guessed.size);saveGame(true)
-  }else{saveGame(false);q.focus()}
+  }else{
+    saveGame(false);q.disabled=go.disabled=false;q.focus()
+  }
 }
 function startsWithAnyPart(value,z){
   const clean=searchNorm(value),compact=compactNorm(value),zClean=searchNorm(z),zCompact=compactNorm(z);
