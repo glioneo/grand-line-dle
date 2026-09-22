@@ -3,7 +3,7 @@
 ## V2.01 — revelação sequencial + SEO
 
 - Corrigida a virada diária do modo **Conexões** para usar a mesma referência de data local dos modos Clássico, Wanted e Timeline.
-- No modo **Clássico**, cada tentativa agora revela os nove campos um de cada vez, criando suspense antes do resultado completo.
+- No modo **Clássico**, cada tentativa agora revela os nove campos um de cada vez, com intervalo de **400 ms** entre eles para deixar a progressão mais perceptível e criar suspense antes do resultado completo.
 - A busca fica temporariamente bloqueada durante a revelação para impedir tentativas sobrepostas.
 - A vitória e a comemoração só aparecem após a revelação do último campo.
 - A animação respeita `prefers-reduced-motion`; partidas restauradas continuam aparecendo imediatamente.

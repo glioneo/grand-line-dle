@@ -63,8 +63,8 @@ function add(x,{animate=false}={}){
     cells.forEach((cell,i)=>setTimeout(()=>{
       cell.classList.remove("cell-reveal-pending");
       cell.classList.add("cell-reveal-in");
-      if(i===cells.length-1)setTimeout(resolve,220);
-    },i*190));
+      if(i===cells.length-1)setTimeout(resolve,320);
+    },i*400));
   });
 }
 
