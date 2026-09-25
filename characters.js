@@ -1,7 +1,7 @@
 const CHARACTERS=[
   {
     "name": "Monkey D. Luffy",
-    "image": "luffy_v45.jpg",
+    "image": "Luffy.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "East Blue",
@@ -23,7 +23,7 @@ const CHARACTERS=[
   },
   {
     "name": "Roronoa Zoro",
-    "image": "zoro.jpg",
+    "image": "Zoro.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "East Blue",
@@ -45,7 +45,7 @@ const CHARACTERS=[
   },
   {
     "name": "Nami",
-    "image": "nami_v45.jpg",
+    "image": "Nami.png",
     "gender": "Feminino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "East Blue",
@@ -62,7 +62,7 @@ const CHARACTERS=[
   },
   {
     "name": "Usopp",
-    "image": "usopp.jpg",
+    "image": "Usopp.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "East Blue",
@@ -82,7 +82,7 @@ const CHARACTERS=[
   },
   {
     "name": "Sanji",
-    "image": "sanji_v45.jpg",
+    "image": "Sanji.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "North Blue",
@@ -103,7 +103,7 @@ const CHARACTERS=[
   },
   {
     "name": "Tony Tony Chopper",
-    "image": "chopper.jpg",
+    "image": "Chopper.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "Grand Line",
@@ -120,7 +120,7 @@ const CHARACTERS=[
   },
   {
     "name": "Nico Robin",
-    "image": "robin.png",
+    "image": "Robin.png",
     "gender": "Feminino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "West Blue",
@@ -138,7 +138,7 @@ const CHARACTERS=[
   },
   {
     "name": "Franky",
-    "image": "franky_v45.jpg",
+    "image": "Franky.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "South Blue",
@@ -156,7 +156,7 @@ const CHARACTERS=[
   },
   {
     "name": "Brook",
-    "image": "brook.jpg",
+    "image": "Brook.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "West Blue",
@@ -173,7 +173,7 @@ const CHARACTERS=[
   },
   {
     "name": "Jinbe",
-    "image": "jinbe_v45.jpg",
+    "image": "Jinbe.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Chapéu de Palha",
     "origin": "Grand Line",
@@ -2404,7 +2404,7 @@ const CHARACTERS=[
   },
   {
     "name": "Nefertari Vivi",
-    "image": "vivi.jpg",
+    "image": "Vivi.png",
     "gender": "Feminino",
     "affiliation": "Reino de Alabasta",
     "origin": "Grand Line",
@@ -3864,7 +3864,7 @@ const CHARACTERS=[
   },
   {
     "name": "Karoo",
-    "image": "karoo.png",
+    "image": "Karoo.png",
     "gender": "Masculino",
     "affiliation": "Reino de Alabasta",
     "origin": "Grand Line",
