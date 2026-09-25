@@ -320,7 +320,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Linlin",
-    "image": "bigmom.jpg",
+    "image": "Charlotte Linlin.png",
     "gender": "Feminino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -2154,7 +2154,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Lola",
-    "image": "charlottelola.jpg",
+    "image": "Charlotte Lola.png",
     "gender": "Feminino",
     "affiliation": "Rolling Pirates",
     "origin": "Grand Line",
@@ -2734,7 +2734,7 @@ const CHARACTERS=[
   },
   {
     "name": "Capone Bege",
-    "image": "bege.jpg",
+    "image": "Capone Bege.png",
     "gender": "Masculino",
     "affiliation": "Piratas Fire Tank",
     "origin": "West Blue",
@@ -3197,7 +3197,7 @@ const CHARACTERS=[
   },
   {
     "name": "Pekoms",
-    "image": "pekoms.jpg",
+    "image": "Pekoms.png",
     "gender": "Masculino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3537,7 +3537,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Perospero",
-    "image": "perospero.jpg",
+    "image": "Charlotte Perospero.png",
     "gender": "Masculino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3553,7 +3553,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Katakuri",
-    "image": "katakuri.jpg",
+    "image": "Charlotte Katakuri.png",
     "gender": "Masculino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3570,7 +3570,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Daifuku",
-    "image": "daifuku.jpg",
+    "image": "Charlotte Daifuku.png",
     "gender": "Masculino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3586,7 +3586,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Oven",
-    "image": "oven.jpg",
+    "image": "Charlotte Oven.png",
     "gender": "Masculino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3602,7 +3602,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Cracker",
-    "image": "cracker.png",
+    "image": "Charlotte Cracker.png",
     "gender": "Masculino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3618,7 +3618,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Brûlée",
-    "image": "brulee.png",
+    "image": "Charlotte Brûlée.png",
     "gender": "Feminino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3631,7 +3631,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Smoothie",
-    "image": "smoothie.jpg",
+    "image": "Charlotte Smoothie.png",
     "gender": "Feminino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3647,7 +3647,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Chiffon",
-    "image": "chiffon.jpg",
+    "image": "Charlotte Chiffon.png",
     "gender": "Feminino",
     "affiliation": "Piratas Fire Tank",
     "origin": "Grand Line",
@@ -3660,7 +3660,7 @@ const CHARACTERS=[
   },
   {
     "name": "Charlotte Pudding",
-    "image": "pudding.jpg",
+    "image": "Charlotte Pudding.png",
     "gender": "Feminino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
@@ -3738,7 +3738,7 @@ const CHARACTERS=[
   },
   {
     "name": "Barão Tamago",
-    "image": "tamago.jpg",
+    "image": "Tamago.png",
     "gender": "Masculino",
     "affiliation": "Piratas da Big Mom",
     "origin": "Grand Line",
