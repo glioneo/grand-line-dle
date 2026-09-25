@@ -419,7 +419,7 @@ const CHARACTERS=[
   },
   {
     "name": "Buggy",
-    "image": "buggy.jpg",
+    "image": "Buggy.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "Grand Line",
@@ -459,7 +459,7 @@ const CHARACTERS=[
   },
   {
     "name": "Dracule Mihawk",
-    "image": "mihawk.jpg",
+    "image": "Dracule Mihawk.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "Desconhecido",
@@ -1246,7 +1246,7 @@ const CHARACTERS=[
   },
   {
     "name": "Crocodile",
-    "image": "crocodile_v45.jpg",
+    "image": "Crocodile.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "Grand Line",
@@ -1265,7 +1265,7 @@ const CHARACTERS=[
   },
   {
     "name": "Daz Bonez",
-    "image": "dazbonez.jpg",
+    "image": "Daz Bonez.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "West Blue",
@@ -1281,7 +1281,7 @@ const CHARACTERS=[
   },
   {
     "name": "Galdino",
-    "image": "galdino.jpg",
+    "image": "Galdino.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "South Blue",
@@ -1297,7 +1297,7 @@ const CHARACTERS=[
   },
   {
     "name": "Alvida",
-    "image": "alvida.jpg",
+    "image": "Alvida.png",
     "gender": "Feminino",
     "affiliation": "Cross Guild",
     "origin": "East Blue",
@@ -1310,7 +1310,7 @@ const CHARACTERS=[
   },
   {
     "name": "Mohji",
-    "image": "mohji.jpg",
+    "image": "Mohji.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "East Blue",
@@ -1323,7 +1323,7 @@ const CHARACTERS=[
   },
   {
     "name": "Richie",
-    "image": "richie.jpg",
+    "image": "Richie.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "East Blue",
@@ -1336,7 +1336,7 @@ const CHARACTERS=[
   },
   {
     "name": "Cabaji",
-    "image": "cabaji.jpg",
+    "image": "Cabaji.png",
     "gender": "Masculino",
     "affiliation": "Cross Guild",
     "origin": "East Blue",
