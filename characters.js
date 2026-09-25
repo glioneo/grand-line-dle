@@ -235,7 +235,7 @@ const CHARACTERS=[
   },
   {
     "name": "Shanks",
-    "image": "shanks.png",
+    "image": "Shanks.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Ruivo",
     "origin": "West Blue",
@@ -3877,7 +3877,7 @@ const CHARACTERS=[
   },
   {
     "name": "Benn Beckman",
-    "image": "bennbeckman.png",
+    "image": "Benn Beckman.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Ruivo",
     "origin": "North Blue",
@@ -3892,7 +3892,7 @@ const CHARACTERS=[
   },
   {
     "name": "Yasopp",
-    "image": "yasopp.png",
+    "image": "Yasopp.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Ruivo",
     "origin": "East Blue",
@@ -3907,7 +3907,7 @@ const CHARACTERS=[
   },
   {
     "name": "Lucky Roux",
-    "image": "luckyroux.png",
+    "image": "Lucky Roux.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Ruivo",
     "origin": "South Blue",
