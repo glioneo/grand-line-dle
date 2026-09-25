@@ -257,7 +257,7 @@ const CHARACTERS=[
   },
   {
     "name": "Marshall D. Teach",
-    "image": "teach_v44.jpg",
+    "image": "Marshall D. Teach.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "Grand Line",
@@ -378,7 +378,7 @@ const CHARACTERS=[
   },
   {
     "name": "Kuzan",
-    "image": "kuzan_v44.jpg",
+    "image": "Kuzan.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "South Blue",
@@ -997,7 +997,7 @@ const CHARACTERS=[
   },
   {
     "name": "Jesus Burgess",
-    "image": "burgess.jpg",
+    "image": "Jesus Burgess.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "Grand Line",
@@ -1013,7 +1013,7 @@ const CHARACTERS=[
   },
   {
     "name": "Shiryu",
-    "image": "shiryu.jpg",
+    "image": "Shiryu.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "Grand Line",
@@ -1029,7 +1029,7 @@ const CHARACTERS=[
   },
   {
     "name": "Van Augur",
-    "image": "vanaugur.jpg",
+    "image": "Van Augur.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "East Blue",
@@ -1044,7 +1044,7 @@ const CHARACTERS=[
   },
   {
     "name": "Avalo Pizarro",
-    "image": "avalopizarro.jpg",
+    "image": "Avalo Pizarro.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "North Blue",
@@ -1060,7 +1060,7 @@ const CHARACTERS=[
   },
   {
     "name": "Laffitte",
-    "image": "laffitte.jpg",
+    "image": "Laffitte.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "West Blue",
@@ -1075,7 +1075,7 @@ const CHARACTERS=[
   },
   {
     "name": "Catarina Devon",
-    "image": "catarinadevon.jpg",
+    "image": "Catarina Devon.png",
     "gender": "Feminino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "South Blue",
@@ -1091,7 +1091,7 @@ const CHARACTERS=[
   },
   {
     "name": "Sanjuan Wolf",
-    "image": "sanjuanwolf.jpg",
+    "image": "Sanjuan Wolf.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "West Blue",
@@ -1107,7 +1107,7 @@ const CHARACTERS=[
   },
   {
     "name": "Vasco Shot",
-    "image": "vascoshot.jpg",
+    "image": "Vasco Shot.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "South Blue",
@@ -1123,7 +1123,7 @@ const CHARACTERS=[
   },
   {
     "name": "Doc Q",
-    "image": "docq.jpg",
+    "image": "Doc Q.png",
     "gender": "Masculino",
     "affiliation": "Piratas do Barba Negra",
     "origin": "North Blue",
