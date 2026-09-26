@@ -372,14 +372,14 @@ body {
 .wantedColorChoice{display:flex;align-items:center;justify-content:center;gap:7px;margin:0 auto 12px;color:#f5e7bb;font-size:13px;font-weight:800}
 .wantedColorBtn{border:1px solid rgba(226,188,92,.5);background:rgba(5,20,31,.86);color:#f5e7bb;padding:7px 11px;border-radius:9px;font-weight:800;cursor:pointer}
 .wantedColorBtn.active{background:#d8ad45;color:#071521}
-.silhouetteStage.stage-0 img{filter:blur(36px) saturate(.78) brightness(.88);transform:scale(1.055)}
+.silhouetteStage.stage-0 img{filter:blur(34px) saturate(.78) brightness(.88);transform:scale(1.055)}
 .silhouetteStage.stage-1 img{filter:blur(32px) saturate(.8) brightness(.9);transform:scale(1.05)}
 .silhouetteStage.stage-2 img{filter:blur(28px) saturate(.82) brightness(.91);transform:scale(1.045)}
 .silhouetteStage.stage-3 img{filter:blur(23px) saturate(.85) brightness(.93);transform:scale(1.04)}
 .silhouetteStage.stage-4 img{filter:blur(18px) saturate(.88) brightness(.95);transform:scale(1.03)}
 .silhouetteStage.stage-5 img{filter:blur(12px) saturate(.92) brightness(.97);transform:scale(1.02)}
 .silhouetteStage.stage-6 img{filter:blur(6px) saturate(.96) brightness(.99);transform:scale(1.01)}
-.silhouetteStage.no-color.stage-0 img{filter:grayscale(1) blur(36px) brightness(.88);}
+.silhouetteStage.no-color.stage-0 img{filter:grayscale(1) blur(34px) brightness(.88);}
 .silhouetteStage.no-color.stage-1 img{filter:grayscale(1) blur(32px) brightness(.9);}
 .silhouetteStage.no-color.stage-2 img{filter:grayscale(1) blur(28px) brightness(.91);}
 .silhouetteStage.no-color.stage-3 img{filter:grayscale(1) blur(23px) brightness(.93);}
