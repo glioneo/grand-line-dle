@@ -3295,7 +3295,7 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 0,
-    "arc": "Egghead"
+    "arc": "Jaya"
   },
   {
     "name": "Saint Topman Warcury",
@@ -3311,7 +3311,7 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 0,
-    "arc": "Egghead"
+    "arc": "Jaya"
   },
   {
     "name": "Saint Ethanbaron V. Nusjuro",
@@ -3328,7 +3328,7 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 0,
-    "arc": "Egghead"
+    "arc": "Jaya"
   },
   {
     "name": "Saint Shepherd Ju Peter",
@@ -3343,7 +3343,7 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 0,
-    "arc": "Egghead"
+    "arc": "Jaya"
   },
   {
     "name": "Saint Jaygarcia Saturn",
@@ -3359,7 +3359,7 @@ const CHARACTERS=[
     ],
     "bounty": 0,
     "height": 0,
-    "arc": "Egghead"
+    "arc": "Jaya"
   },
   {
     "name": "Figarland Garling",
