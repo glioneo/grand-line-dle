@@ -9,8 +9,11 @@
   const todayKey=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
   const seedShuffle=list=>{const a=[...list];let seed=0x51A0E77E;const rnd=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
   const eligible=CHARACTERS.filter(c=>c.daily!==false);
-  const d=new Date(),day=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/86400000);
-  const answer=seedShuffle(eligible)[day%eligible.length];
+  const wantedForDate=date=>{const day=Math.floor(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate())/86400000);return seedShuffle(eligible)[day%eligible.length]};
+  const d=new Date();
+  const answer=wantedForDate(d);
+  const yd=new Date(d);yd.setDate(yd.getDate()-1);
+  const yesterdayAnswer=wantedForDate(yd);
   const q=document.querySelector('#silQ'),go=document.querySelector('#silGo'),sugs=document.querySelector('#silSugs'),msg=document.querySelector('#silMsg'),stage=document.querySelector('#silStage'),img=document.querySelector('#silImage'),attemptEl=document.querySelector('#silAttempts'),result=document.querySelector('#silResult'),history=document.querySelector('#silHistory'),colorOn=document.querySelector('#wantedColorOn'),colorOff=document.querySelector('#wantedColorOff');
   if(!q||!img)return;
   const silhouetteSrc=`images/wanted/${wantedAssetName(answer.name)}`;
@@ -40,5 +43,8 @@
   function submit(){if(state.done)return;const value=q.value.trim(),c=eligible.find(x=>matches(x,value));if(!c){msg.textContent='Escolha um personagem da lista.';return}if(guessed.has(c.name)){msg.textContent='Você já tentou esse personagem.';return}guessed.add(c.name);state.guesses.push(c.name);q.value='';sugs.style.display='none';save();renderHistory();if(c.name===answer.name){finish();return}msg.textContent=`Não é ${c.name}. A imagem ficou um pouco mais nítida.`;visualStage();q.focus()}
   colorOn?.addEventListener('click',()=>{useColor=true;localStorage.setItem(COLOR_STORE,'on');updateColorMode()});
   colorOff?.addEventListener('click',()=>{useColor=false;localStorage.setItem(COLOR_STORE,'off');updateColorMode()});
-  q.addEventListener('input',suggest);q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();const first=sugs.querySelector('.sug');if(first&&sugs.style.display!=='none')q.value=first.dataset.n;submit()}});go.addEventListener('click',submit);restore();
+  q.addEventListener('input',suggest);q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();const first=sugs.querySelector('.sug');if(first&&sugs.style.display!=='none')q.value=first.dataset.n;submit()}});go.addEventListener('click',submit);
+  const yesterdayBox=document.querySelector('#wantedYesterdayCharacter');
+  if(yesterdayBox){const photo=yesterdayBox.querySelector('.yesterdayPhoto'),name=yesterdayBox.querySelector('.yesterdayName');if(photo){photo.src=`images/characters/${yesterdayAnswer.image}`;photo.alt=yesterdayAnswer.name}if(name)name.textContent=yesterdayAnswer.name}
+  restore();
 })();
