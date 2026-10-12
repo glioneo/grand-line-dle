@@ -1,9 +1,9 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grand Line Dle - Jogo de Adivinhação de One Piece</title>
-<meta name="description" content="Jogue Grand Line Dle, um jogo de adivinhação de One Piece com cinco modos: Clássico, Wanted, Conexões, Timeline e Higher/Lower.">
+<meta name="description" content="Jogue Grand Line Dle, um jogo de adivinhação de One Piece com cinco modos: Clássico, Wanted, Akuma no Mi, Timeline e Higher/Lower.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://glioneo.github.io/grand-line-dle/">
 <meta property="og:title" content="Grand Line Dle">
-<meta property="og:description" content="Teste seus conhecimentos de One Piece em cinco modos: Clássico, Wanted, Conexões, Timeline e Higher/Lower.">
+<meta property="og:description" content="Teste seus conhecimentos de One Piece em cinco modos: Clássico, Wanted, Akuma no Mi, Timeline e Higher/Lower.">
 <meta property="og:image" content="https://glioneo.github.io/grand-line-dle/share-card.png">
 <meta property="og:url" content="https://glioneo.github.io/grand-line-dle/">
 <meta property="og:type" content="website">
@@ -11,12 +11,12 @@
 <meta name="twitter:title" content="Grand Line Dle - Jogo de One Piece">
 <meta name="twitter:description" content="Cinco modos para testar seus conhecimentos de One Piece.">
 <meta name="twitter:image" content="https://glioneo.github.io/grand-line-dle/share-card.png">
-<link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="style.css?v=2.0.1"></head><body><main>
-<header><div class="skull">☠</div><div><h1>GRAND LINE <b>DLE</b> <small>V2.01</small></h1><p>Descubra o personagem de hoje</p></div></header><div id="streakFlag" class="daysFlag" data-tier="white" title="Sequência atual" aria-label="Sequência atual"><img class="flagArt" src="images/flags/days-flag-white.webp" alt=""><strong id="streakCount">0</strong></div>
+<link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="style.css?v=2.1.0"></head><body><main>
+<header><div class="skull">☠</div><div><h1>GRAND LINE <b>DLE</b> <small>V2.10</small></h1><p>Descubra o personagem de hoje</p></div></header><div id="streakFlag" class="daysFlag" data-tier="white" title="Sequência atual" aria-label="Sequência atual"><img class="flagArt" src="images/flags/days-flag-white.webp" alt=""><strong id="streakCount">0</strong></div>
 <nav class="modeNav" aria-label="Modos de jogo">
 <button class="modeTab active" data-mode="classic">CLÁSSICO</button>
 <button class="modeTab" data-mode="silhouette">WANTED</button>
-<button class="modeTab" data-mode="connections">CONEXÕES</button>
+<button class="modeTab" data-mode="akuma">AKUMA NO MI</button>
 <button class="modeTab" data-mode="timeline">TIMELINE</button>
 <button class="modeTab" data-mode="higherlower">HIGHER/LOWER</button>
 </nav>
@@ -38,15 +38,7 @@
   <div id="silResult" class="silResult hidden"></div>
   <section id="wantedYesterdayCharacter" class="yesterdayBox"><h2>☠ PERSONAGEM DE ONTEM ☠</h2><div class="yesterdayCard"><img class="yesterdayPhoto" src="" alt=""><strong class="yesterdayName">—</strong></div></section>
 </section>
-<section id="connectionsMode" class="modePanel connectionsMode hidden">
-  <h2>☠ CONEXÕES DO DIA ☠</h2>
-  <p class="connectionsIntro">Descubra a conexão entre os dois personagens. Respostas erradas liberam pistas progressivamente.</p>
-  <div class="connectionsPair"><article id="connLeft" class="connCard"></article><div class="connLink">🔗</div><article id="connRight" class="connCard"></article></div>
-  <p class="connQuestion">Qual é a conexão entre esses personagens?</p>
-  <section class="connSearch"><div class="bar"><input id="connQ" placeholder="Digite a conexão..." autocomplete="off"><button id="connGo" type="button">Tentar</button></div></section>
-  <div class="connMeta">Erros: <b id="connErrors">0</b></div>
-  <div id="connMsg" class="connMsg"></div><div id="connHints" class="connHints"></div><div id="connResult" class="connResult hidden"></div>
-</section>
+<section id="akumaMode" class="modePanel akumaMode hidden"><h2>☠ AKUMA NO MI DO DIA ☠</h2><p>Descubra quem utilizou esta fruta!</p><div class="akumaFruit"><h3 id="akumaName"></h3></div><div id="akumaHints"></div><p>Erros: <b id="akumaErrors">0</b></p><section class="search"><div class="bar"><input id="akumaQ" placeholder="Digite um personagem..." autocomplete="off"><button id="akumaGo">Tentar</button><div id="akumaSugs"></div></div></section><p id="akumaMsg"></p><div id="akumaHistory"></div><div id="akumaResult" class="hidden"></div></section>
 <section id="timelineMode" class="modePanel timelineMode hidden">
   <h2>☠ TIMELINE DO DIA ☠</h2>
   <p class="timelineIntro">Encaixe o próximo item na posição correta. A linha cresce até suas 3 vidas acabarem.</p>
@@ -66,4 +58,4 @@
   </div>
   <div id="hlMsg" class="hlMsg"></div><button id="hlRestart" class="hlRestart hidden" type="button">Jogar novamente</button>
 </section>
-</main><script src="characters.js?v=2.0.1"></script><script src="app.js?v=2.0.1"></script><script src="silhouette.js?v=2.0.2"></script><script src="connections.js?v=2.0.2"></script><script src="timeline.js?v=2.0.1"></script><script src="higherlower.js?v=2.0.1"></script></body></html>
+</main><script src="characters.js?v=2.0.1"></script><script src="app.js?v=2.0.1"></script><script src="silhouette.js?v=2.0.2"></script><script src="akuma.js?v=2.1.0"></script><script src="timeline.js?v=2.0.1"></script><script src="higherlower.js?v=2.0.1"></script></body></html>
