@@ -3062,7 +3062,7 @@ const CHARACTERS=[
     "gender": "Masculino",
     "affiliation": "Clã Kozuki",
     "origin": "Grand Line",
-    "fruit": "Sem fruta",
+    "fruit": "Paramecia",
     "haki": "2 tipos",
     "haki_types": [
       "Observação",
@@ -3750,7 +3750,7 @@ const CHARACTERS=[
     ],
     "bounty": 429000000,
     "height": 3.01,
-    "arc": "Whole Cake Island"
+    "arc": "Fish-Man Island"
   },
   {
     "name": "Stussy",
